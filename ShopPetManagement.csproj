@@ -61,15 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\Cashier.cs" />
-    <Compile Include="DAO\CreateDB.cs" />
-    <Compile Include="DAO\Customer.cs" />
-    <Compile Include="DAO\PetCategory.cs" />
-    <Compile Include="DAO\Pet.cs" />
-    <Compile Include="DAO\PetType.cs" />
-    <Compile Include="DAO\Sale.cs" />
-    <Compile Include="DAO\SaleDetail.cs" />
-    <Compile Include="DAO\UserAccount.cs" />
+    <Compile Include="BLL\UserAccountService.cs" />
+    <Compile Include="BLL\UserService.cs" />
+    <Compile Include="DAL\UserAccountDAL.cs" />
+    <Compile Include="DAL\UserAccountRepository.cs" />
+    <Compile Include="DTO\Cashier.cs" />
+    <Compile Include="DTO\CreateDB.cs" />
+    <Compile Include="DTO\Customer.cs" />
+    <Compile Include="DTO\PetCategory.cs" />
+    <Compile Include="DTO\Pet.cs" />
+    <Compile Include="DTO\PetType.cs" />
+    <Compile Include="DTO\Sale.cs" />
+    <Compile Include="DTO\SaleDetail.cs" />
+    <Compile Include="DTO\UserAccount.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="view\CashCustomer.cs">
       <SubType>Form</SubType>
@@ -306,5 +310,6 @@
     <Content Include="images\us_dollar_301px.png" />
     <Content Include="images\us_dollar_30px.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShopPetManagement.BLL;
+using ShopPetManagement.DAO;
 
 namespace Pet_Shop_Management_System
 {
     public partial class UserForm : Form
     {
+        private readonly UserService _userService = new UserService();
         //SqlConnection cn = new SqlConnection();
         //SqlCommand cm = new SqlCommand();
         //DbConnect dbcon = new DbConnect();
@@ -20,9 +23,10 @@ namespace Pet_Shop_Management_System
         string title = "Pet Shop Management System";
         public UserForm()
         {
-            //InitializeComponent();
+            InitializeComponent();
             //cn = new SqlConnection(dbcon.connection());
-            //LoadUser();
+            LoadUser();
+            dgvUser.DataBindingComplete += DgvUser_DataBindingComplete;
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -35,55 +39,65 @@ namespace Pet_Shop_Management_System
             UserModule module = new UserModule(this);
             module.ShowDialog();
         }
+        private void DgvUser_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            if (!dgvUser.Columns.Contains("No"))
+            {
+                dgvUser.Columns.Insert(0, new DataGridViewTextBoxColumn
+                {
+                    Name = "No",
+                    HeaderText = "No",
+                    ReadOnly = true
+                });
+            }
+            for (int i = 0; i < dgvUser.Rows.Count; i++)
+                dgvUser.Rows[i].Cells["No"].Value = i + 1;
+        }
 
 
-      
+
 
         private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //string colName = dgvUser.Columns[e.ColumnIndex].Name;
-            //if(colName=="Edit")
-            //{
-            //    UserModule module = new UserModule(this);
-            //    module.lbluid.Text = dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //    module.txtName.Text = dgvUser.Rows[e.RowIndex].Cells[2].Value.ToString();
-            //    module.txtAddress.Text = dgvUser.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //    module.txtPhone.Text = dgvUser.Rows[e.RowIndex].Cells[4].Value.ToString();
-            //    module.cbRole.Text = dgvUser.Rows[e.RowIndex].Cells[5].Value.ToString();
-            //    module.dtDob.Text = dgvUser.Rows[e.RowIndex].Cells[6].Value.ToString();
-            //    module.txtPass.Text = dgvUser.Rows[e.RowIndex].Cells[7].Value.ToString();
+            if (e.RowIndex < 0) return;
 
-            //    module.btnSave.Enabled = false;
-            //    module.btnUpdate.Enabled = true;
-            //    module.ShowDialog();
-            //}
-            //else if(colName=="Delete")
+            var colName = dgvUser.Columns[e.ColumnIndex].Name;
+            // 1) Lấy đối tượng UserAccount của dòng này
+            var account = dgvUser.Rows[e.RowIndex].DataBoundItem as UserAccount;
+            if (account == null) return;
+
+            //if (colName == "Edit")
             //{
-            //    if(MessageBox.Show("Are you sure you want to delete this record?","Delete Record",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            //    // Chuyển sang Form sửa, truyền thẳng object
+            //    using (var module = new UserModule(this))
             //    {
-            //        dbcon.executeQuery("DELETE FROM tbUser WHERE id LIKE'" + dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString() + "'");                    
-            //        MessageBox.Show("User data has been successfully removed", title, MessageBoxButtons.OK, MessageBoxIcon.Question);
+            //        module.LoadUser(account);   // bạn tự viết helper trong UserModule
+            //        module.ShowDialog();
             //    }
             //}
-
-            //LoadUser();
+            else if (colName == "Delete")
+            {
+                if (MessageBox.Show("Bạn có chắc muốn xóa bản ghi này?",
+                                    "Xác nhận",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Question)
+                                    == DialogResult.Yes)
+                {
+                    // Gọi BLL xóa
+                    _userService.DeleteAccount(account.UserAccountId);
+                    MessageBox.Show("Xóa thành công!", "Thông báo",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadUser();  // refresh grid
+                }
+            }
         }
 
         #region Method
         public void LoadUser()
         {
-            //int i = 0;
-            //dgvUser.Rows.Clear();
-            //cm = new SqlCommand("SELECT * FROM tbUser WHERE CONCAT(name,address,phone,dob,role) LIKE '%" + txtSearch.Text + "%'", cn);
-            //cn.Open();
-            //dr = cm.ExecuteReader();
-            //while (dr.Read())
-            //{
-            //    i++;
-            //    dgvUser.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), DateTime.Parse(dr[5].ToString()).ToShortDateString(), dr[6].ToString());
-            //}
-            //dr.Close();
-            //cn.Close();
+            var list = _userService.GetUsers(txtSearch.Text);
+            dgvUser.AutoGenerateColumns = false;
+            dgvUser.DataSource = new BindingList<UserAccount>(list);
         }
 
         #endregion Method

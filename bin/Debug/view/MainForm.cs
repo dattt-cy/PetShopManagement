@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShopPetManagement.DAO;
 
 namespace Pet_Shop_Management_System
 {
@@ -17,7 +18,7 @@ namespace Pet_Shop_Management_System
         SqlCommand cm = new SqlCommand();
         //DbConnect dbcon = new DbConnect();
         
-        public MainForm()
+        public MainForm(UserAccount account)
         {
             InitializeComponent();
             //cn = new SqlConnection(dbcon.connection());
@@ -46,7 +47,7 @@ namespace Pet_Shop_Management_System
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-        
+            openChildForm(new UserForm());
             
         }
 

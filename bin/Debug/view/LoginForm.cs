@@ -8,11 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShopPetManagement.BLL;
+using ShopPetManagement.DAO;
 
 namespace Pet_Shop_Management_System
 {
+
     public partial class LoginForm : Form
     {
+        private readonly UserAccountService _userService = new UserAccountService();
+
         //SqlConnection cn = new SqlConnection();
         //SqlCommand cm = new SqlCommand();
         //DbConnect dbcon = new DbConnect();
@@ -20,7 +25,7 @@ namespace Pet_Shop_Management_System
         string title = "Pet Shop Management System";
         public LoginForm()
         {
-            //InitializeComponent();
+            InitializeComponent();
             //cn = new SqlConnection(dbcon.connection());
         }
 
@@ -34,39 +39,47 @@ namespace Pet_Shop_Management_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    string _name = "", _role = "";
-            //    cn.Open();
-            //    cm = new SqlCommand("SELECT name,role FROM tbUser WHERE name=@name and password=@password", cn);
-            //    cm.Parameters.AddWithValue("@name", txtname.Text);
-            //    cm.Parameters.AddWithValue("@password", txtpass.Text);
-            //    dr = cm.ExecuteReader();
-            //    dr.Read();
-            //    if(dr.HasRows)
-            //    {
-            //        _name = dr["name"].ToString();
-            //        _role = dr["role"].ToString();
-            //        MessageBox.Show("Welcome  " + _name + " |", "ACCESS GRANTED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        MainForm main = new MainForm();
-            //        main.lblUsername.Text = _name;
-            //        main.lblRole.Text = _role;
-            //        if (_role == "Administrator")
-            //            main.btnUser.Enabled = true;
-            //        this.Hide();
-            //        main.ShowDialog();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Invalid username and password!", "ACCESS DENIED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    dr.Close();
-            //    cn.Close();
-            //    MessageBox.Show(ex.Message, title);
-            //}
+            try
+            {
+                string username = txtname.Text.Trim();
+                string password = txtpass.Text;
+                UserAccount user = _userService.Authenticate(username, password);
+
+                if (user != null)
+                {
+                   
+                    MessageBox.Show($"Welcome {user.Name}",
+                                    "ACCESS GRANTED",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                    
+                    var main = new MainForm(user);
+                    main.lblUsername.Text = user.Name;
+                    main.lblRole.Text = user.Role;
+                    main.btnUser.Enabled = (user.Role == "Administrator");
+
+                    this.Hide();
+                    main.ShowDialog();
+                    this.Show();  
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password!",
+                                    "ACCESS DENIED",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                    txtpass.Clear();
+                    txtname.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
 
         }
 
