@@ -182,7 +182,7 @@ namespace Pet_Shop_Management_System
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(462, 26);
             this.txtQty.TabIndex = 3;
-            this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
+         //   this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
             // 
             // label3
             // 
@@ -249,7 +249,7 @@ namespace Pet_Shop_Management_System
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(462, 26);
             this.txtPrice.TabIndex = 4;
-            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+    //        this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // ProductModule
             // 

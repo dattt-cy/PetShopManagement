@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|c:\\users\\admin\\source\\repos\\shoppetmanagement\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|c:\\users\\admin\\source\\repos\\shoppetmanagement\\dal\\saledetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dal\\saledetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|c:\\users\\admin\\source\\repos\\shoppetmanagement\\view\\userform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\userform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|c:\\users\\admin\\source\\repos\\shoppetmanagement\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|c:\\users\\admin\\source\\repos\\shoppetmanagement\\view\\usermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\usermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|c:\\users\\admin\\source\\repos\\shoppetmanagement\\dal\\salerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dal\\salerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserForm.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserForm.cs",
-              "RelativeDocumentMoniker": "view\\UserForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserForm.cs",
-              "RelativeToolTip": "view\\UserForm.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAowF8AAAAHAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "SaleDetailRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\SaleDetailRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\SaleDetailRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\SaleDetailRepository.cs",
+              "RelativeToolTip": "DAL\\SaleDetailRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:56:11.109Z",
+              "WhenOpened": "2025-04-26T05:49:55.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserForm.Designer.cs",
-              "RelativeDocumentMoniker": "view\\UserForm.Designer.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserForm.Designer.cs",
-              "RelativeToolTip": "view\\UserForm.Designer.cs",
-              "ViewState": "AgIAAPIAAAAAAAAAAAAYwBIBAAABAAAAAAAAAA==",
+              "Title": "SaleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\SaleRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\SaleRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\SaleRepository.cs*",
+              "RelativeToolTip": "DAL\\SaleRepository.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:50:18.019Z",
+              "WhenOpened": "2025-04-26T05:49:26.42Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserForm.cs",
-              "RelativeDocumentMoniker": "view\\UserForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserForm.cs [Design]",
-              "RelativeToolTip": "view\\UserForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:50:10.489Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserModule.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserModule.cs",
-              "RelativeDocumentMoniker": "view\\UserModule.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserModule.cs [Design]",
-              "RelativeToolTip": "view\\UserModule.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:50:10.149Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

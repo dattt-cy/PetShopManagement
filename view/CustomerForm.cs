@@ -1,84 +1,79 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using PetShopApp.DTO;
+using ShopPetManagement.BLL;
+using ShopPetManagement.DAO;
 
 namespace Pet_Shop_Management_System
 {
     public partial class CustomerForm : Form
     {
-        SqlConnection cn = new SqlConnection();
-        SqlCommand cm = new SqlCommand();
-        SqlDataReader dr;
-        string title = "Pet Shop Management System";
+        private readonly CustomerService _service = new CustomerService();
+
         public CustomerForm()
         {
             InitializeComponent();
-            //cn = new SqlConnection(dbcon.connection());
-            //LoadCustomer();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            //CustomerModule module = new CustomerModule(this);
-            //module.ShowDialog();
+            dgvCustomer.AutoGenerateColumns = false;
+            dgvCustomer.DataBindingComplete += DgvCustomer_DataBindingComplete;
+            LoadCustomers();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            LoadCustomer();
+            LoadCustomers();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            using (var module = new CustomerModule(this))
+            {
+                module.ShowDialog();
+            }
         }
 
         private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
+            string colName = dgvCustomer.Columns[e.ColumnIndex].Name;
+            Customer customer = dgvCustomer.Rows[e.RowIndex].DataBoundItem as Customer;
+            if (customer == null) return;
 
-            //string colName = dgvCustomer.Columns[e.ColumnIndex].Name;
-            //if (colName == "Edit")
-            //{
-            //    CustomerModule module = new CustomerModule(this);
-            //    module.lblcid.Text = dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //    module.txtName.Text = dgvCustomer.Rows[e.RowIndex].Cells[2].Value.ToString();
-            //    module.txtAddress.Text = dgvCustomer.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //    module.txtPhone.Text = dgvCustomer.Rows[e.RowIndex].Cells[4].Value.ToString();
-       
-            //    module.btnSave.Enabled = false;
-            //    module.btnUpdate.Enabled = true;
-            //    module.ShowDialog();
-            //}
-            //else if (colName == "Delete")
-            //{
-            //    if (MessageBox.Show("Are you sure you want to delete this customer record?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //    {
-            //        dbcon.executeQuery("DELETE FROM tbCustomer WHERE id LIKE'" + dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString() + "'");
-            //        MessageBox.Show("Customer data has been successfully removed", title, MessageBoxButtons.OK, MessageBoxIcon.Question);
-            //    }
-            //}
-
-            LoadCustomer();
-        }
-
-        #region method
-        public void LoadCustomer()
-        {
-            int i = 0;
-            dgvCustomer.Rows.Clear();
-            cm = new SqlCommand("SELECT * FROM tbCustomer WHERE CONCAT(name,address,phone) LIKE '%" + txtSearch.Text + "%'", cn);
-            cn.Open();
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            if (colName == "Edit")
             {
-                i++;
-                dgvCustomer.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString());
+                using (var module = new CustomerModule(this))
+                {
+                    module.LoadForEdit(customer);
+                    module.ShowDialog();
+                }
             }
-            dr.Close();
-            cn.Close();
+            else if (colName == "Delete")
+            {
+                if (MessageBox.Show("Bạn có chắc muốn xóa khách hàng này?", "Xác nhận",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    _service.Delete(customer.CustomerId);
+                    LoadCustomers();
+                }
+            }
         }
-        #endregion method
+
+        public void LoadCustomers()
+        {
+            var list = _service.Search(txtSearch.Text)
+                               .OrderBy(c => c.CustomerId)
+                               .ToList();
+
+            dgvCustomer.DataSource = new BindingList<Customer>(list);
+        }
+
+        private void DgvCustomer_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            for (int i = 0; i < dgvCustomer.Rows.Count; i++)
+            {
+                dgvCustomer.Rows[i].Cells["ColNo"].Value = i + 1;
+            }
+        }
     }
 }

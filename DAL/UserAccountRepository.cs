@@ -30,5 +30,26 @@ namespace ShopPetManagement.DAL
                 }
             }
         }
+        public void Add(UserAccount user)
+        {
+            using (var ctx = new Model1())
+            {
+                ctx.UserAccounts.Add(user);
+                ctx.SaveChanges();
+            }
+        }
+
+        public void Update(UserAccount user)
+        {
+            using (var ctx = new Model1())
+            {
+                var existing = ctx.UserAccounts.Find(user.UserAccountId);
+                if (existing != null)
+                {
+                    ctx.Entry(existing).CurrentValues.SetValues(user);
+                    ctx.SaveChanges();
+                }
+            }
+        }
     }
 }

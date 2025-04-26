@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ShopPetManagement.DAL;
 using ShopPetManagement.DAO;
 
@@ -11,10 +9,12 @@ namespace ShopPetManagement.BLL
     public class UserService
     {
         private readonly UserAccountRepository _repo = new UserAccountRepository();
+
         public List<UserAccount> GetAllUser()
         {
             return _repo.GetAll();
         }
+
         public List<UserAccount> GetUsers(string searchKey)
         {
             var list = _repo.GetAll();
@@ -22,10 +22,7 @@ namespace ShopPetManagement.BLL
             if (string.IsNullOrWhiteSpace(searchKey))
                 return list;
 
-            
             searchKey = searchKey.Trim().ToLower();
-
-       
             return list
                 .Where(u =>
                     u.Name.ToLower().Contains(searchKey) ||
@@ -36,8 +33,21 @@ namespace ShopPetManagement.BLL
                 )
                 .ToList();
         }
-        public void DeleteAccount(int id)
-      => _repo.Delete(id);
 
+        public void Add(UserAccount user)
+        {
+            _repo.Add(user);
+        }
+
+    
+        public void Update(UserAccount user)
+        {
+            _repo.Update(user);
+        }
+
+        public void Delete(int userAccountId)
+        {
+            _repo.Delete(userAccountId);
+        }
     }
 }

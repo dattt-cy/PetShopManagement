@@ -61,8 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CustomerService.cs" />
+    <Compile Include="BLL\PetCategoryService.cs" />
+    <Compile Include="BLL\PetService.cs" />
+    <Compile Include="BLL\PetTypeService.cs" />
     <Compile Include="BLL\UserAccountService.cs" />
     <Compile Include="BLL\UserService.cs" />
+    <Compile Include="DAL\CustomerRepository.cs" />
+    <Compile Include="DAL\PetCategoryRepository.cs" />
+    <Compile Include="DAL\PetRepository.cs" />
+    <Compile Include="DAL\PetTypeRepository.cs" />
     <Compile Include="DAL\UserAccountDAL.cs" />
     <Compile Include="DAL\UserAccountRepository.cs" />
     <Compile Include="DTO\Cashier.cs" />
@@ -75,6 +83,7 @@
     <Compile Include="DTO\SaleDetail.cs" />
     <Compile Include="DTO\UserAccount.cs" />
     <Compile Include="Model1.cs" />
+    <Compile Include="UIL\PetViewModel.cs" />
     <Compile Include="view\CashCustomer.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

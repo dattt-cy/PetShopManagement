@@ -13,16 +13,12 @@ namespace Pet_Shop_Management_System
 {
     public partial class CashCustomer : Form
     {
-        //SqlConnection cn = new SqlConnection();
-        //SqlCommand cm = new SqlCommand();
-        //DbConnect dbcon = new DbConnect();
-        SqlDataReader dr;
+
         string title = "Pet Shop Management System";
         CashForm cash;
         public CashCustomer(CashForm form)
         {
             InitializeComponent();
-            //cn = new SqlConnection(dbcon.connection());
             cash = form;
             LoadCustomer();
         }

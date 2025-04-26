@@ -152,7 +152,7 @@ namespace Pet_Shop_Management_System
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "UserAccountId";
+            this.Column1.DataPropertyName = "none";
             this.Column1.HeaderText = "No";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -161,6 +161,7 @@ namespace Pet_Shop_Management_System
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.DataPropertyName = "UserAccountId";
             this.Column2.HeaderText = "ID";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";

@@ -1,96 +1,76 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// File: CustomerModule.cs
+using System;
 using System.Windows.Forms;
+using PetShopApp.DTO;
+using ShopPetManagement.BLL;
+using ShopPetManagement.DAO;
 
 namespace Pet_Shop_Management_System
 {
     public partial class CustomerModule : Form
     {
-        //SqlConnection cn = new SqlConnection();
-        //SqlCommand cm = new SqlCommand();
-        //DbConnect dbcon = new DbConnect();
-        string title = "Pet Shop Management System";
+        private readonly CustomerService _service;
+        private readonly CustomerForm _parent;
+        private Customer _editingCustomer;
 
-        bool check = false;
-        CustomerForm customer;
-        public CustomerModule(CustomerForm form)
+        public CustomerModule(CustomerForm parent)
         {
             InitializeComponent();
-            //cn = new SqlConnection(dbcon.connection());
-            customer = form;
+            _service = new CustomerService();
+            _parent = parent;
+
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    CheckField();
-            //    if (check)
-            //    {
-            //        if (MessageBox.Show("Are you sure you want to register this customer?", "Customer Registration", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //        {
-            //            cm = new SqlCommand("INSERT INTO tbCustomer(name,address,phone)VALUES(@name,@address,@phone)", cn);
-            //            cm.Parameters.AddWithValue("@name", txtName.Text);
-            //            cm.Parameters.AddWithValue("@address", txtAddress.Text);
-            //            cm.Parameters.AddWithValue("@phone", txtPhone.Text);
+            if (!ValidateFields())
+                return;
 
-            //            cn.Open();
-            //            cm.ExecuteNonQuery();
-            //            cn.Close();
-            //            MessageBox.Show("Customer has been successfully registered!", title);
-            //            Clear();
-            //            customer.LoadCustomer();
-            //        }
+            var customer = new Customer
+            {
+                Name = txtName.Text.Trim(),
+                Address = txtAddress.Text.Trim(),
+                Phone = txtPhone.Text.Trim()
+            };
 
-            //    }
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    cn.Close();
-            //    MessageBox.Show(ex.Message, title);
-            //}
+            try
+            {
+                _service.Add(customer);
+                MessageBox.Show("Customer has been successfully registered!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _parent.LoadCustomers();
+                Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    CheckField();
-            //    if (check)
-            //    {
-            //        if (MessageBox.Show("Are you sure you want to Edit this record?", "Record Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //        {
-            //            cm = new SqlCommand("UPDATE tbCustomer SET name=@name, address=@address, phone=@phone WHERE id=@id", cn);
-            //            cm.Parameters.AddWithValue("@id", lblcid.Text);
-            //            cm.Parameters.AddWithValue("@name", txtName.Text);
-            //            cm.Parameters.AddWithValue("@address", txtAddress.Text);
-            //            cm.Parameters.AddWithValue("@phone", txtPhone.Text);
+            if (_editingCustomer == null)
+                return;
 
-            //            cn.Open();
-            //            cm.ExecuteNonQuery();
-            //            cn.Close();
-            //            MessageBox.Show("Customer data has been successfully updated!", title);
-            //            Clear();
-            //            customer.LoadCustomer();
-            //            this.Dispose();
-            //        }
+            if (!ValidateFields())
+                return;
 
-            //    }
+            _editingCustomer.Name = txtName.Text.Trim();
+            _editingCustomer.Address = txtAddress.Text.Trim();
+            _editingCustomer.Phone = txtPhone.Text.Trim();
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    cn.Close();
-            //    MessageBox.Show(ex.Message, title);
-            //}
+            try
+            {
+                _service.Update(_editingCustomer);
+                MessageBox.Show("Customer data has been successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _parent.LoadCustomers();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -100,21 +80,20 @@ namespace Pet_Shop_Management_System
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-        }
-        #region method
-        public void CheckField()
-        {
-            if (txtName.Text == "" | txtAddress.Text == "" | txtPhone.Text=="")
-            {
-                MessageBox.Show("Required data field!", "Warning");
-                return;
-            }
-     
-            check = true;
+            this.Close();
         }
 
-        public void Clear()
+        private bool ValidateFields()
+        {
+            if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtAddress.Text) || string.IsNullOrWhiteSpace(txtPhone.Text))
+            {
+                MessageBox.Show("Name, Address and Phone are required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private void Clear()
         {
             txtName.Clear();
             txtAddress.Clear();
@@ -122,7 +101,21 @@ namespace Pet_Shop_Management_System
 
             btnSave.Enabled = true;
             btnUpdate.Enabled = false;
+            _editingCustomer = null;
         }
-        #endregion method
+
+        /// <summary>
+        /// Nạp dữ liệu customer vào form để chỉnh sửa
+        /// </summary>
+        public void LoadForEdit(Customer customer)
+        {
+            _editingCustomer = customer;
+            txtName.Text = customer.Name;
+            txtAddress.Text = customer.Address;
+            txtPhone.Text = customer.Phone;
+
+            btnSave.Enabled = false;
+            btnUpdate.Enabled = true;
+        }
     }
 }

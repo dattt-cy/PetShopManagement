@@ -1,104 +1,84 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using ShopPetManagement.BLL;
+using ShopPetManagement.DAO;
 
 namespace Pet_Shop_Management_System
 {
     public partial class UserModule : Form
     {
-        //SqlConnection cn = new SqlConnection();
-        //SqlCommand cm = new SqlCommand();
-        //DbConnect dbcon = new DbConnect();
-        string title = "Pet Shop Management System";
+        private readonly string title = "Pet Shop Management System";
+        private readonly UserService _userService;
+        private readonly UserForm _userForm;
+        private UserAccount _editingUser;
 
-        bool check = false;
-        UserForm userForm;
-        public UserModule(UserForm user)
+        public UserModule(UserForm userForm)
         {
             InitializeComponent();
-            //cn = new SqlConnection(dbcon.connection());
-            userForm = user;
-            cbRole.SelectedIndex = 1;
+            _userForm = userForm;
+            _userService = new UserService();
+
+            // Thiết lập comboBox Role
+            cbRole.Items.Clear();
+            cbRole.Items.AddRange(new string[] { "Administrator", "Cashier", "Employee" });
+            cbRole.SelectedIndex = 2; // mặc định Employee
+
+            // Ban đầu chỉ enable nút Save
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    CheckField();
-            //    if(check)
-            //    {
-            //         if(MessageBox.Show("Are you sure you want to register this user?","User Registration",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
-            //        {
-            //            cm = new SqlCommand("INSERT INTO tbUser(name,address,phone,role,dob,password)VALUES(@name,@address,@phone,@role,@dob,@password)", cn);
-            //            cm.Parameters.AddWithValue("@name", txtName.Text);
-            //            cm.Parameters.AddWithValue("@address", txtAddress.Text);
-            //            cm.Parameters.AddWithValue("@phone", txtPhone.Text);
-            //            cm.Parameters.AddWithValue("@role", cbRole.Text);
-            //            cm.Parameters.AddWithValue("@dob", dtDob.Value);
-            //            cm.Parameters.AddWithValue("@password", txtPass.Text);
+            if (!ValidateFields())
+                return;
 
-            //            cn.Open();
-            //            cm.ExecuteNonQuery();
-            //            cn.Close();
-            //            MessageBox.Show("User has been successfully registered!", title);
-            //            Clear();
-            //            userForm.LoadUser();
-            //        }
+            try
+            {
+                var user = new UserAccount
+                {
+                    Name = txtName.Text.Trim(),
+                    Address = txtAddress.Text.Trim(),
+                    Phone = txtPhone.Text.Trim(),
+                    Role = cbRole.SelectedItem.ToString(),
+                    DateOfBirth = dtDob.Value.Date,
+                    Password = cbRole.SelectedItem.ToString() == "Employee" ? null : txtPass.Text
+                };
 
-            //    }
-                
-            //}
-            //catch (Exception ex)
-            //{
-            //    cn.Close();
-            //    MessageBox.Show(ex.Message, title);
-            //}
+                _userService.Add(user);
+                MessageBox.Show("User successfully registered!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _userForm.LoadUser();
+                Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (_editingUser == null || !ValidateFields())
+                return;
 
-            //try
-            //{
-            //    CheckField();
-            //    if (check)
-            //    {
-            //        if (MessageBox.Show("Are you sure you want to update this record?", "Edit Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //        {
-            //            cm = new SqlCommand("UPDATE tbUser SET name=@name, address=@address, phone=@phone, role=@role, dob=@dob, password=@password WHERE id=@id", cn);
-            //            cm.Parameters.AddWithValue("@id", lbluid.Text);
-            //            cm.Parameters.AddWithValue("@name", txtName.Text);
-            //            cm.Parameters.AddWithValue("@address", txtAddress.Text);
-            //            cm.Parameters.AddWithValue("@phone", txtPhone.Text);
-            //            cm.Parameters.AddWithValue("@role", cbRole.Text);
-            //            cm.Parameters.AddWithValue("@dob", dtDob.Value);
-            //            cm.Parameters.AddWithValue("@password", txtPass.Text);
+            try
+            {
+                _editingUser.Name = txtName.Text.Trim();
+                _editingUser.Address = txtAddress.Text.Trim();
+                _editingUser.Phone = txtPhone.Text.Trim();
+                _editingUser.Role = cbRole.SelectedItem.ToString();
+                _editingUser.DateOfBirth = dtDob.Value.Date;
+                _editingUser.Password = cbRole.SelectedItem.ToString() == "Employee" ? null : txtPass.Text;
 
-            //            cn.Open();
-            //            cm.ExecuteNonQuery();
-            //            cn.Close();
-            //            MessageBox.Show("User's data has been successfully updated!", title);
-            //            Clear();
-            //            userForm.LoadUser();
-            //            this.Dispose();
-            //        }
-
-            //    }
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    cn.Close();
-            //    MessageBox.Show(ex.Message, title);
-            //}
+                _userService.Update(_editingUser);
+                MessageBox.Show("User data successfully updated!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _userForm.LoadUser();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -108,66 +88,65 @@ namespace Pet_Shop_Management_System
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
 
         private void cbRole_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbRole.Text=="Employee")
-            {
-                this.Height = 453 - 26;
-                lblPass.Visible = false;
-                txtPass.Visible = false;
-
-            }
-            else
-            {
-                lblPass.Visible = true;
-                txtPass.Visible = true;
-                this.Height = 453;
-                
-            }
+            bool isEmployee = cbRole.SelectedItem.ToString() == "Employee";
+            lblPass.Visible = !isEmployee;
+            txtPass.Visible = !isEmployee;
+            this.Height = isEmployee ? 427 : 453;
         }
 
-        #region Method
-
-        public void Clear()
+        #region Helpers
+        private void Clear()
         {
             txtName.Clear();
             txtAddress.Clear();
             txtPhone.Clear();
             txtPass.Clear();
-            cbRole.SelectedIndex = 0;
-            dtDob.Value = DateTime.Now;
+            cbRole.SelectedIndex = 2;
+            dtDob.Value = DateTime.Today;
 
+            btnSave.Enabled = true;
             btnUpdate.Enabled = false;
+            _editingUser = null;
         }
 
-        //to check field and date of birth
-        public void CheckField()
+        private bool ValidateFields()
         {
-            if(txtName.Text == ""| txtAddress.Text=="")
+            if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtAddress.Text))
             {
-                MessageBox.Show("Required data field!", "Warning");
-                return;
+                MessageBox.Show("Name and Address are required.", title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
-            
-            if(checkAGe(dtDob.Value) < 18)
+            if (dtDob.Value.Date > DateTime.Today.AddYears(-18))
             {
-                MessageBox.Show("User is child worker!. Under 18 year", "Warning");
-                return;
+                MessageBox.Show("User must be at least 18 years old.", title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
-            check = true;
+            if (cbRole.SelectedItem.ToString() != "Employee" && string.IsNullOrWhiteSpace(txtPass.Text))
+            {
+                MessageBox.Show("Password is required for non-employee roles.", title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
 
-        // to Calculate Age for under 18 
-        private static int checkAGe(DateTime dateofBirth)
+        public void LoadUserForEdit(UserAccount user)
         {
-            int age = DateTime.Now.Year - dateofBirth.Year;
-            if (DateTime.Now.DayOfYear < dateofBirth.DayOfYear)
-                age = age - 1;
-            return age;
+            _editingUser = user;
+            txtName.Text = user.Name;
+            txtAddress.Text = user.Address;
+            txtPhone.Text = user.Phone;
+            cbRole.SelectedItem = user.Role;
+            dtDob.Value = user.DateOfBirth;
+            txtPass.Text = user.Password;
+
+            btnSave.Enabled = false;
+            btnUpdate.Enabled = true;
         }
-        #endregion Method
+        #endregion
     }
 }
