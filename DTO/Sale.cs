@@ -22,7 +22,7 @@ namespace ShopPetManagement.DAO
 
         public int CashierId { get; set; }
         [ForeignKey(nameof(CashierId))]
-        public Cashier Cashier { get; set; }
+        public UserAccount Cashier { get; set; }
 
         public virtual ICollection<SaleDetail> Details { get; set; }
 

@@ -1,89 +1,99 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShopPetManagement.BLL;
+using ShopPetManagement.UIL;  // chứa PetViewModel
 
 namespace Pet_Shop_Management_System
 {
     public partial class CashProduct : Form
     {
-        //SqlConnection cn = new SqlConnection();
-        //SqlCommand cm = new SqlCommand();
-        //DbConnect dbcon = new DbConnect();
-        //SqlDataReader dr;
-        string title = "Pet Shop Management System";
-        public string uname;
-        CashForm cash;
-        public CashProduct(CashForm form)
+        private readonly PetService _petService = new PetService();
+        private readonly CashForm _parent;
+
+        public CashProduct(CashForm parent)
         {
             InitializeComponent();
-            //cn = new SqlConnection(dbcon.connection());
-            cash = form;
-            LoadProduct();
+            _parent = parent;
+            LoadProduct();    // gọi ngay khi form khởi tạo
         }
 
-        private void btnCash_Click(object sender, EventArgs e)
+        private void LoadProduct()
         {
-            //foreach(DataGridViewRow dr in dgvProduct.Rows)
-            //{
-            //    bool chkbox = Convert.ToBoolean(dr.Cells["Select"].Value);
-            //    if(chkbox)
-            //    {
-            //        try
-            //        {
-            //            cm = new SqlCommand("INSERT INTO tbCash(transno, pcode, pname, qty, price, cashier) VALUES (@transno, @pcode, @pname, @qty, @price, @cashier)", cn);
-            //            cm.Parameters.AddWithValue("@transno",cash.lblTransno.Text);
-            //            cm.Parameters.AddWithValue("@pcode",dr.Cells[1].Value.ToString());
-            //            cm.Parameters.AddWithValue("@pname", dr.Cells[2].Value.ToString());
-            //            cm.Parameters.AddWithValue("@qty",1);
-            //            cm.Parameters.AddWithValue("@price", Convert.ToDouble( dr.Cells[5].Value.ToString()));
-            //            cm.Parameters.AddWithValue("@cashier",uname);
+            var pets = _petService
+                .GetAllPets()              
+                .OrderBy(p => p.PetId)
+                .Select((p, i) => new PetViewModel
+                {
+                    No = i + 1,
+                    PetId = p.PetId,
+                    Pcode = p.PCode,
+                    Name = p.Name,
+                    Type = p.Type.Name,
+                    Category = p.Category.Name,
+                    Price = p.SalePrice
+                })
+                .ToList();
 
-            //            cn.Open();
-            //            cm.ExecuteNonQuery();
-            //            cn.Close();
-
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            cn.Close();
-            //            MessageBox.Show(ex.Message,title);
-            //        }
-            //    }
-            //}
-
-            //cash.loadCash();
-            //this.Dispose();
+            dgvProduct.AutoGenerateColumns = false;
+            dgvProduct.DataSource = new BindingList<PetViewModel>(pets);
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            LoadProduct();
+            // nếu muốn search theo tên:
+            var keyword = txtSearch.Text.Trim();
+            var pets = string.IsNullOrEmpty(keyword)
+                ? _petService.GetAllPets()
+                : _petService.Search(keyword);
+
+            // Re-bind tương tự như trên
+            var vms = pets
+                .OrderBy(p => p.PetId)
+                .Select((p, i) => new PetViewModel
+                {
+                    No = i + 1,
+                    PetId = p.PetId,
+                    Pcode = p.PCode,
+                    Name = p.Name,
+                    Type = p.Type.Name,
+                    Category = p.Category.Name,
+                    Price = p.SalePrice
+                })
+                .ToList();
+
+            dgvProduct.DataSource = new BindingList<PetViewModel>(vms);
         }
 
-        #region Method
-
-        public void LoadProduct()
+        private void btnCash_Click(object sender, EventArgs e)
         {
-            //int i = 0;
-            //dgvProduct.Rows.Clear();
-            //cm = new SqlCommand("SELECT pcode, pname, ptype, pcategory, pprice FROM tbProduct WHERE CONCAT(pname,ptype,pcategory) LIKE '%" + txtSearch.Text + "%' AND pqty > "+0+"", cn);
-            //cn.Open();
-            //dr = cm.ExecuteReader();
-            //while (dr.Read())
-            //{
-            //    i++;
-            //    dgvProduct.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString());
-            //}
-            //dr.Close();
-            //cn.Close();
+          
+            foreach (DataGridViewRow row in dgvProduct.Rows)
+            {
+                bool isChecked = Convert.ToBoolean(row.Cells["Select"].Value);
+                if (!isChecked) continue;
+
+                var vm = row.DataBoundItem as PetViewModel;
+                if (vm == null) continue;
+
+                var item = new CartItemViewModel
+                {
+                    PetId = vm.PetId,
+                    PCode = vm.Pcode,
+                    Name = vm.Name,
+                    Qty = 1,            
+                    Price = vm.Price
+                };
+                _parent.AddCartItem(item);
+            }
+            this.Close();
         }
-        #endregion Method
+
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

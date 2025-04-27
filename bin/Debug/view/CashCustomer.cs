@@ -1,25 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShopPetManagement.BLL;
+using ShopPetManagement.UIL;
 
 namespace Pet_Shop_Management_System
 {
     public partial class CashCustomer : Form
     {
+        private readonly CustomerService _customerService = new CustomerService();
+        private readonly CashForm _parent;
 
-        string title = "Pet Shop Management System";
-        CashForm cash;
-        public CashCustomer(CashForm form)
+        public CashCustomer(CashForm parent)
         {
             InitializeComponent();
-            cash = form;
+            _parent = parent;
             LoadCustomer();
         }
 
@@ -28,45 +24,34 @@ namespace Pet_Shop_Management_System
             LoadCustomer();
         }
 
-    
+        private void LoadCustomer()
+        {
+            var list = _customerService
+                .Search(txtSearch.Text)
+                .Select((c, i) => new CustomerViewModel
+                {
+                    No = i + 1,
+                    CustomerId = c.CustomerId,
+                    Name = c.Name,
+                    Phone = c.Phone
+                })
+                .ToList();
+
+            dgvCustomer.AutoGenerateColumns = false;
+            dgvCustomer.DataSource = new BindingList<CustomerViewModel>(list);
+        }
 
         private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //string colName = dgvCustomer.Columns[e.ColumnIndex].Name;
-            //if(colName == "Choice")
-            //{
-            //    dbcon.executeQuery("UPDATE tbCash SET cid=" + dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString() + " WHERE transno=" + cash.lblTransno.Text + "");
-            //    cash.loadCash();
-            //    this.Dispose();
-            //}
+            if (e.RowIndex < 0) return;
+            if (dgvCustomer.Columns[e.ColumnIndex].Name != "Choice") return;
 
-        }
+            var vm = dgvCustomer.Rows[e.RowIndex].DataBoundItem as CustomerViewModel;
+            if (vm == null) return;
 
-        #region method
-        public void LoadCustomer()
-        {
-            
-            //try
-            //{
-            //    int i = 0;
-            //    dgvCustomer.Rows.Clear();
-            //    cm = new SqlCommand("SELECT id,name,phone FROM tbCustomer WHERE name LIKE '%" + txtSearch.Text + "%'", cn);
-            //    cn.Open();
-            //    dr = cm.ExecuteReader();
-            //    while (dr.Read())
-            //    {
-            //        i++;
-            //        dgvCustomer.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString());
-            //    }
-            //    dr.Close();
-            //    cn.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    cn.Close();
-            //    MessageBox.Show(ex.Message, title);
-            //}
+
+            _parent.SetCustomer(vm.CustomerId, vm.Name);
+            this.Close();
         }
-        #endregion method
     }
 }

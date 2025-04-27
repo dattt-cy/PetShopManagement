@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PetShopApp.DTO;
 using ShopPetManagement.DAO;
 
 namespace ShopPetManagement.DAL
@@ -51,5 +52,22 @@ namespace ShopPetManagement.DAL
                 }
             }
         }
+        public int GetUserIdByUsername(string username)
+        {
+            using (var ctx = new Model1())
+            {
+                var user = ctx.UserAccounts
+                              .FirstOrDefault(u => u.Name == username);
+                return user?.UserAccountId ?? 0;
+            }
+        }
+        public UserAccount GetById(int userAccountId)
+        {
+            using (var ctx = new Model1())
+            {
+                return ctx.UserAccounts.Find(userAccountId);
+            }
+        }
+
     }
 }

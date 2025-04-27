@@ -23,7 +23,7 @@ namespace ShopPetManagement.DAO
         public string Phone { get; set; }
 
         [Required, StringLength(50)]
-        public string Role { get; set; }   // Administrator, Cashier, Employee
+        public string Role { get; set; }  
 
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }

@@ -39,10 +39,9 @@ namespace Pet_Shop_Management_System
             var allPets = _service.GetAllPets();
             int nextNo = allPets.Count + 1;
 
-            // 2) Sinh PCode
-            string newPCode = $"P{nextNo:D3}";   // => P001, P002, ...
+            string newPCode = $"P{nextNo:D3}";   
 
-            // 3) Chuẩn bị Pet mới
+       
             string typeName = txttype.Text.Trim();
             var type = _typeService.GetAllTypes()
                                    .FirstOrDefault(t =>

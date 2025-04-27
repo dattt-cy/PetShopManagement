@@ -50,5 +50,9 @@ namespace ShopPetManagement.BLL
         {
             _repo.Delete(customerId);
         }
+        public Customer GetById(int customerId)
+        {
+            return _repo.GetById(customerId);
+        }
     }
 }

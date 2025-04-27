@@ -1,178 +1,211 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
+using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShopPetManagement.BLL;
+using ShopPetManagement.UIL;   // chứa CartItemViewModel
 
 namespace Pet_Shop_Management_System
 {
     public partial class CashForm : Form
     {
-        //SqlConnection cn = new SqlConnection();
-        //SqlCommand cm = new SqlCommand();
-        //DbConnect dbcon = new DbConnect();
-        //SqlDataReader dr;
-        string title = "Pet Shop Management System";
-        MainForm main;
+        // Services
+        private readonly SaleService _saleService = new SaleService();
+        private readonly CustomerService _customerSvc = new CustomerService();
+        private readonly UserService _userService = new UserService();
+
+        // Giỏ hàng tạm
+        private readonly List<CartItemViewModel> _cartItems = new List<CartItemViewModel>();
+
+        private readonly MainForm _mainForm;
+        private int _cashierId;
+        private int _customerId;
+        private string _customerName;
+        private bool _customerChosen;
+
         public CashForm(MainForm form)
         {
             InitializeComponent();
-            //cn = new SqlConnection(dbcon.connection());
-            main = form;
-            getTransno();
-            loadCash();
+            _mainForm = form;
+            _cashierId = _userService.GetUserIdByUsername(_mainForm.lblUsername.Text);
+            _customerId = 0;
+            _customerChosen = false;
+            _customerName = "";
+
+            // ánh xạ column của DataGridView với CartItemViewModel
+            dgvCash.AutoGenerateColumns = false;
+            dgvCash.Columns["No"].DataPropertyName = nameof(CartItemViewModel.No);
+            dgvCash.Columns["Pcode"].DataPropertyName = nameof(CartItemViewModel.PCode);
+            dgvCash.Columns["Name2"].DataPropertyName = nameof(CartItemViewModel.Name);
+            dgvCash.Columns["Qty"].DataPropertyName = nameof(CartItemViewModel.Qty);
+            dgvCash.Columns["Price"].DataPropertyName = nameof(CartItemViewModel.Price);
+            dgvCash.Columns["Total"].DataPropertyName = nameof(CartItemViewModel.Total);
+            dgvCash.Columns["CustomerName"].DataPropertyName = nameof(CartItemViewModel.CustomerName);
+            dgvCash.Columns["CashierName"].DataPropertyName = nameof(CartItemViewModel.CashierName);
+
+            // Hook sự kiện chỉnh sửa trực tiếp ô Qty/Price
+            dgvCash.CellEndEdit += dgvCash_CellEndEdit;
+
+            GenerateTransNo();
+            RefreshCartGrid();
         }
 
+        // Nút "+ Product"
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            CashProduct product = new CashProduct(this);
-            product.uname = main.lblUsername.Text;
-            product.ShowDialog();
-
+            using (var frm = new CashProduct(this))
+                frm.ShowDialog();
         }
 
+        // Nút "Cash" (2 bước)
         private void btnCash_Click(object sender, EventArgs e)
         {
-            CashCustomer customer = new CashCustomer(this);
-            customer.ShowDialog();
+            if (_cartItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng thêm sản phẩm trước khi thanh toán.",
+                                "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            //if(MessageBox.Show("Are you sure you want to cash this product?","Cashing",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
-            //{
-            //    getTransno();
-            //    main.loadDailySale();
-            //    for (int i=0; i<dgvCash.Rows.Count; i++)
-            //    {
-            //        dbcon.executeQuery("UPDATE tbProduct SET pqty= pqty - " + int.Parse(dgvCash.Rows[i].Cells[4].Value.ToString()) + " WHERE pcode LIKE " + dgvCash.Rows[i].Cells[2].Value.ToString() + "");
-            //    }
-            //    dgvCash.Rows.Clear();
-            //}
+            if (!_customerChosen)
+            {
+                // Bước 1: chọn khách
+                using (var frm = new CashCustomer(this))
+                    frm.ShowDialog();
+
+                if (_customerChosen)
+                {
+                    btnCash.Text = "Xác nhận thanh toán";
+                    RefreshCartGrid();  // để hiện tên khách trong grid
+                }
+                return;
+            }
+
+            // Bước 2: đã chọn khách, thực sự ghi hoá đơn
+            DoCompleteSale();
+        }
+
+        // Được gọi từ CashCustomer để đẩy thông tin khách về
+        public void SetCustomer(int customerId, string customerName)
+        {
+            _customerId = customerId;
+            _customerName = customerName;
+            _customerChosen = true;
+        }
+
+        private void DoCompleteSale()
+        {
+            try
+            {
+                var products = _cartItems
+                    .Select(c => (petId: c.PetId, quantity: c.Qty, unitPrice: c.Price))
+                    .ToList();
+
+                int saleId = _saleService.CreateSale(_customerId, _cashierId, products);
+
+                MessageBox.Show($"Thanh toán thành công! Mã hoá đơn: {saleId}",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // reset form...
+            }
+            catch (Exception ex)
+            {
+                // In ra chi tiết sâu nhất của exception
+                var baseEx = ex.GetBaseException();
+                MessageBox.Show(
+                    $"Lỗi khi ghi hoá đơn:\n{baseEx.Message}",
+                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void AddCartItem(CartItemViewModel item)
+        {
+            var exist = _cartItems.FirstOrDefault(x => x.PetId == item.PetId);
+            if (exist != null) exist.Qty += item.Qty;
+            else _cartItems.Add(item);
+            RefreshCartGrid();
         }
 
        
-
         private void dgvCash_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //string colName = dgvCash.Columns[e.ColumnIndex].Name;
-            //removeitem:
-            //if(colName=="Delete")
-            //{
-            //    if (MessageBox.Show("Are you sure you want to delete this cash?", "Delete Cash", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //    {
-            //        dbcon.executeQuery("DELETE FROM tbCash WHERE cashid LIKE '" + dgvCash.Rows[e.RowIndex].Cells[1].Value.ToString() + "'");
-            //        MessageBox.Show("Cash record has been successfully removed!", title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    }               
-            //}
-            //else if (colName == "Increase")
-            //{
-            //    int i = checkPqty(dgvCash.Rows[e.RowIndex].Cells[2].Value.ToString());
-            //    if(int.Parse(dgvCash.Rows[e.RowIndex].Cells[4].Value.ToString()) < i)
-            //    {
-            //        dbcon.executeQuery("UPDATE tbCash SET qty = qty + " + 1 + " WHERE cashid LIKE '" + dgvCash.Rows[e.RowIndex].Cells[1].Value.ToString() + "'");
-            //    }
-            //   else
-            //    {
-            //        MessageBox.Show("Remaining quantity on hand is " + i + "!", "Out of Stock ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //        return;
-            //    }
-            //}
-            //else if (colName == "Decrease")
-            //{
-            //    if(int.Parse(dgvCash.Rows[e.RowIndex].Cells[4].Value.ToString()) == 1)
-            //    {
-            //        colName = "Delete";
-            //        goto removeitem;
-            //    }
-            //    dbcon.executeQuery("UPDATE tbCash SET qty = qty - " + 1 + " WHERE cashid LIKE '" + dgvCash.Rows[e.RowIndex].Cells[1].Value.ToString() + "'");
-            //}
-            //loadCash();
+            if (e.RowIndex < 0) return;
+            var col = dgvCash.Columns[e.ColumnIndex].Name;
+            var vm = dgvCash.Rows[e.RowIndex].DataBoundItem as CartItemViewModel;
+            if (vm == null) return;
+
+            var item = _cartItems.FirstOrDefault(x => x.PetId == vm.PetId);
+            if (item == null) return;
+
+            switch (col)
+            {
+                case "Up": item.Qty++; break;
+                case "Down": if (item.Qty > 1) item.Qty--; break;
+                case "Delete": _cartItems.Remove(item); break;
+                default: return;
+            }
+            RefreshCartGrid();
         }
 
-        #region method
-        public void getTransno()
+
+        private void dgvCash_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            //try
-            //{
-            //    string sdate = DateTime.Now.ToString("yyyyMMdd");
-            //    int count;
-            //    string transno;
+            if (e.RowIndex < 0) return;
+            var colName = dgvCash.Columns[e.ColumnIndex].Name;
+            if (colName != "Qty" && colName != "Price") return;
 
-            //    cn.Open();
-            //    cm = new SqlCommand("SELECT TOP 1 transno FROM tbCash WHERE transno LIKE '" + sdate + "%' ORDER BY cashid DESC", cn);
-            //    dr = cm.ExecuteReader();
-            //    dr.Read();
+            var vm = dgvCash.Rows[e.RowIndex].DataBoundItem as CartItemViewModel;
+            var item = _cartItems.FirstOrDefault(x => x.PetId == vm?.PetId);
+            if (vm == null || item == null) return;
 
-            //    if (dr.HasRows)
-            //    {
-            //        transno = dr[0].ToString();
-            //        count = int.Parse(transno.Substring(8, 4));
-            //        lblTransno.Text = sdate + (count + 1);
-            //    }
-            //    else
-            //    {
-            //        transno = sdate + "1001";
-            //        lblTransno.Text = transno;
-            //    }
-            //    dr.Close();
-            //    cn.Close();
+            if (colName == "Qty"
+                && int.TryParse(dgvCash.Rows[e.RowIndex].Cells["Qty"].Value?.ToString(), out var q))
+            {
+                item.Qty = q;
+            }
+            else if (colName == "Price"
+                && decimal.TryParse(dgvCash.Rows[e.RowIndex].Cells["Price"].Value?.ToString(), out var p))
+            {
+                item.Price = p;
+            }
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    cn.Close();
-            //    MessageBox.Show(ex.Message, title);
-            //}
+            RefreshCartGrid();
         }
 
-
-        public void loadCash()
+       
+        private void RefreshCartGrid()
         {
-            //try
-            //{
-            //    int i = 0;
-            //    double total = 0;
-            //    dgvCash.Rows.Clear();
-            //    cm = new SqlCommand("SELECT cashid,pcode,pname,qty,price,total,c.name,cashier FROM tbCash as cash LEFT JOIN tbCustomer c ON cash.cid = c.id WHERE transno LIKE " + lblTransno.Text + "", cn);
-            //    cn.Open();
-            //    dr = cm.ExecuteReader();
-            //    while (dr.Read())
-            //    {
-            //        i++;
-            //        dgvCash.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString());
-            //        total += double.Parse(dr[5].ToString());
-            //    }
-            //    dr.Close();
-            //    cn.Close();
-            //    lblTotal.Text = total.ToString("#,##0.00");
-            //}
-            //catch (Exception ex)
-            //{
-            //    cn.Close();
-            //    MessageBox.Show(ex.Message, title);
-            //}
+            var list = _cartItems
+                .Select((c, i) => new CartItemViewModel
+                {
+                    No = i + 1,
+                    PetId = c.PetId,
+                    PCode = c.PCode,
+                    Name = c.Name,
+                    Qty = c.Qty,
+                    Price = c.Price,
+                    CustomerName = _customerChosen
+                                      ? _customerName
+                                      : "",
+                    CashierName = _userService
+                                      .GetById(_cashierId)?
+                                      .Name ?? ""
+                })
+                .ToList();
+
+            dgvCash.DataSource = new BindingList<CartItemViewModel>(list);
+
+            lblTotal.Text = list.Sum(x => x.Total)
+                                .ToString("#,##0.00");
         }
 
-        public  int checkPqty(string pcode)
+     
+        private void GenerateTransNo()
         {
-            int i = 0;
-            //try
-            //{
-            //    cn.Open();
-            //    cm = new SqlCommand("SELECT pqty FROM tbProduct WHERE pcode LIKE '" + pcode + "'", cn);
-            //    i = int.Parse(cm.ExecuteScalar().ToString());
-            //    cn.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    cn.Close();
-            //    MessageBox.Show(ex.Message, title);
-            //}
-            return i;
+            lblTransno.Text = DateTime.Now.ToString("yyyyMMdd")
+                            + new Random().Next(1000, 9999).ToString();
         }
-        #endregion method
     }
 }

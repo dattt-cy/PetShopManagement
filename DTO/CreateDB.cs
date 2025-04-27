@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ShopPetManagement.DAO
 {
     public class CreateDB:
-        CreateDatabaseIfNotExists<Model1>
+        DropCreateDatabaseIfModelChanges<Model1>
     {
         protected override void Seed(Model1 context)
         {

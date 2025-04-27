@@ -53,5 +53,12 @@ namespace ShopPetManagement.DAL
                 }
             }
         }
+        public Customer GetById(int customerId)
+        {
+            using (var ctx = new Model1())
+            {
+                return ctx.Customers.Find(customerId);
+            }
+        }
     }
 }

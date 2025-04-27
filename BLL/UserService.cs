@@ -49,5 +49,13 @@ namespace ShopPetManagement.BLL
         {
             _repo.Delete(userAccountId);
         }
+        public int GetUserIdByUsername(string username)
+        {
+            return _repo.GetUserIdByUsername(username);
+        }
+        public UserAccount GetById(int userAccountId)
+        {
+            return _repo.GetById(userAccountId);
+        }
     }
 }
