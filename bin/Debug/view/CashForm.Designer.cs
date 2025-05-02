@@ -35,14 +35,6 @@ namespace Pet_Shop_Management_System
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashForm));
             this.dgvCash = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCash = new Guna.UI2.WinForms.Guna2Button();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTransno = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +46,14 @@ namespace Pet_Shop_Management_System
             this.Up = new System.Windows.Forms.DataGridViewImageColumn();
             this.Down = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCash = new Guna.UI2.WinForms.Guna2Button();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTransno = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCash)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -94,111 +94,6 @@ namespace Pet_Shop_Management_System
             this.dgvCash.Size = new System.Drawing.Size(1000, 236);
             this.dgvCash.TabIndex = 5;
             this.dgvCash.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCash_CellContentClick);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnCash);
-            this.panel2.Controls.Add(this.lblTotal);
-            this.panel2.Controls.Add(this.lblTransno);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 49);
-            this.panel2.TabIndex = 4;
-            // 
-            // btnCash
-            // 
-            this.btnCash.AutoRoundedCorners = true;
-            this.btnCash.BorderRadius = 20;
-            this.btnCash.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCash.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCash.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCash.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCash.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.btnCash.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCash.ForeColor = System.Drawing.Color.White;
-            this.btnCash.Location = new System.Drawing.Point(852, 3);
-            this.btnCash.Name = "btnCash";
-            this.btnCash.Size = new System.Drawing.Size(144, 43);
-            this.btnCash.TabIndex = 8;
-            this.btnCash.Text = "Cash";
-            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(704, 14);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(110, 20);
-            this.lblTotal.TabIndex = 7;
-            this.lblTotal.Text = "0.00";
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTransno
-            // 
-            this.lblTransno.Location = new System.Drawing.Point(294, 14);
-            this.lblTransno.Name = "lblTransno";
-            this.lblTransno.Size = new System.Drawing.Size(132, 20);
-            this.lblTransno.TabIndex = 6;
-            this.lblTransno.Text = "0000000000";
-            this.lblTransno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.label3.Location = new System.Drawing.Point(603, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 22);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Total Price $";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.label2.Location = new System.Drawing.Point(170, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 22);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Transaction no:";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd.FillColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.btnAdd.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAdd.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAdd.HoverState.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
-            this.btnAdd.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(3, 7);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(93, 34);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Product";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 15);
-            this.panel1.TabIndex = 3;
             // 
             // No
             // 
@@ -304,6 +199,111 @@ namespace Pet_Shop_Management_System
             this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
             this.Delete.Width = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnCash);
+            this.panel2.Controls.Add(this.lblTotal);
+            this.panel2.Controls.Add(this.lblTransno);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnAdd);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 49);
+            this.panel2.TabIndex = 4;
+            // 
+            // btnCash
+            // 
+            this.btnCash.AutoRoundedCorners = true;
+            this.btnCash.BorderRadius = 20;
+            this.btnCash.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCash.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCash.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCash.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCash.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.btnCash.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCash.ForeColor = System.Drawing.Color.White;
+            this.btnCash.Location = new System.Drawing.Point(852, 3);
+            this.btnCash.Name = "btnCash";
+            this.btnCash.Size = new System.Drawing.Size(144, 43);
+            this.btnCash.TabIndex = 8;
+            this.btnCash.Text = "Cash";
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(704, 14);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(110, 20);
+            this.lblTotal.TabIndex = 7;
+            this.lblTotal.Text = "0.00";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTransno
+            // 
+            this.lblTransno.Location = new System.Drawing.Point(294, 14);
+            this.lblTransno.Name = "lblTransno";
+            this.lblTransno.Size = new System.Drawing.Size(132, 20);
+            this.lblTransno.TabIndex = 6;
+            this.lblTransno.Text = "0000000000";
+            this.lblTransno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.label3.Location = new System.Drawing.Point(603, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 22);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Total Price $";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.label2.Location = new System.Drawing.Point(170, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 22);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Transaction no:";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.FillColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.btnAdd.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAdd.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAdd.HoverState.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
+            this.btnAdd.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(3, 7);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(93, 34);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Product";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1000, 15);
+            this.panel1.TabIndex = 3;
             // 
             // CashForm
             // 

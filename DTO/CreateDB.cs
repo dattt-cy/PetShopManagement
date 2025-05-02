@@ -12,7 +12,7 @@ namespace ShopPetManagement.DAO
     {
         protected override void Seed(Model1 context)
         {
-
+            
         }
     }
 }

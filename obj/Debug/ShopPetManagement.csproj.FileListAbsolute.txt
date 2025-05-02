@@ -65,3 +65,11 @@ C:\Users\ADMIN\source\repos\ShopPetManagement\obj\Debug\ShopPetManagement.csproj
 C:\Users\ADMIN\source\repos\ShopPetManagement\obj\Debug\ShopPetM.87AFEF3E.Up2Date
 C:\Users\ADMIN\source\repos\ShopPetManagement\obj\Debug\ShopPetManagement.exe
 C:\Users\ADMIN\source\repos\ShopPetManagement\obj\Debug\ShopPetManagement.pdb
+C:\Users\ADMIN\source\repos\ShopPetManagement\bin\Debug\log4net.dll
+C:\Users\ADMIN\source\repos\ShopPetManagement\bin\Debug\Migrations.dll
+C:\Users\ADMIN\source\repos\ShopPetManagement\bin\Debug\log4net.xml
+C:\Users\ADMIN\source\repos\ShopPetManagement\obj\Debug\ShopPetManagement.Migrations.InitialCreate.resources
+C:\Users\ADMIN\source\repos\ShopPetManagement\obj\Debug\ShopPetManagement.Migrations.deleteCashier.resources
+C:\Users\ADMIN\source\repos\ShopPetManagement\bin\Debug\log4net.pdb
+C:\Users\ADMIN\source\repos\ShopPetManagement\obj\Debug\ShopPetManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\ADMIN\source\repos\ShopPetManagement\obj\Debug\ShopPetManagement.exe.config

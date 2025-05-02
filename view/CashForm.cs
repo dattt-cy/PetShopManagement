@@ -108,11 +108,19 @@ namespace Pet_Shop_Management_System
                 MessageBox.Show($"Thanh toán thành công! Mã hoá đơn: {saleId}",
                                 "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // reset form...
+                _cartItems.Clear();
+
+             
+                _customerId = 0;
+
+                btnCash.Text = "Cash";
+
+            
+                RefreshCartGrid();
             }
             catch (Exception ex)
             {
-                // In ra chi tiết sâu nhất của exception
+   
                 var baseEx = ex.GetBaseException();
                 MessageBox.Show(
                     $"Lỗi khi ghi hoá đơn:\n{baseEx.Message}",

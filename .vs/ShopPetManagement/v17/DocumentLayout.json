@@ -3,132 +3,100 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|c:\\users\\admin\\source\\repos\\shoppetmanagement\\dto\\createdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\createdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dto\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dto\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dto\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dto\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dal\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dal\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\cashform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\cashform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\uil\\cartitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:uil\\cartitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|c:\\users\\admin\\source\\repos\\shoppetmanagement\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\bll\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:bll\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\usermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\usermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dal\\salerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dal\\salerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dal\\useraccountdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dal\\useraccountdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\splashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\splashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dal\\saledetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dal\\saledetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\productmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\productmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\productform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\productform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\bll\\petservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:bll\\petservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\bll\\pettypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:bll\\pettypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dto\\saledetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\saledetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\bll\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:bll\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\cashcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\cashcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\cashcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\cashcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\cashproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\cashproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dal\\pettyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dal\\pettyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\cashproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\cashproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\bll\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:bll\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\uil\\petviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:uil\\petviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\uil\\customerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:uil\\customerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\cashproduct.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\cashproduct.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dal\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dal\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dal\\petcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dal\\petcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:view\\cashform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dto\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\migrations\\202504270708559_deletecashier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:migrations\\202504270708559_deletecashier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dto\\model1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\model1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dto\\saledetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\saledetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\migrations\\202504231001302_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:migrations\\202504231001302_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dto\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\dto\\createdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F1D2EE6-BECE-42D6-ABEE-307CB5B9416E}|ShopPetManagement.csproj|solutionrelative:dto\\createdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -138,48 +106,252 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "UserModule.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserModule.cs",
+              "RelativeDocumentMoniker": "view\\UserModule.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserModule.cs [Design]",
+              "RelativeToolTip": "view\\UserModule.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T01:25:41.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CustomerModule.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CustomerModule.cs",
+              "RelativeDocumentMoniker": "view\\CustomerModule.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CustomerModule.cs [Design]",
+              "RelativeToolTip": "view\\CustomerModule.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T01:23:33.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CashProduct.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashProduct.cs",
+              "RelativeDocumentMoniker": "view\\CashProduct.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashProduct.cs [Design]",
+              "RelativeToolTip": "view\\CashProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T01:23:04.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserForm.cs",
+              "RelativeDocumentMoniker": "view\\UserForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\UserForm.cs [Design]",
+              "RelativeToolTip": "view\\UserForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T01:06:32.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SplashForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\SplashForm.cs",
+              "RelativeDocumentMoniker": "view\\SplashForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\SplashForm.cs [Design]",
+              "RelativeToolTip": "view\\SplashForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T01:05:11.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductModule.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\ProductModule.cs",
+              "RelativeDocumentMoniker": "view\\ProductModule.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\ProductModule.cs [Design]",
+              "RelativeToolTip": "view\\ProductModule.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T01:04:16.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\Dashboard.cs",
+              "RelativeDocumentMoniker": "view\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\Dashboard.cs [Design]",
+              "RelativeToolTip": "view\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T00:57:49.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\LoginForm.cs",
+              "RelativeDocumentMoniker": "view\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\LoginForm.cs [Design]",
+              "RelativeToolTip": "view\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T00:57:48.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T02:18:51.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CustomerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CustomerForm.cs",
+              "RelativeDocumentMoniker": "view\\CustomerForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CustomerForm.cs [Design]",
+              "RelativeToolTip": "view\\CustomerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T01:48:25.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\MainForm.cs",
               "RelativeDocumentMoniker": "view\\MainForm.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\MainForm.cs",
               "RelativeToolTip": "view\\MainForm.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAQwFwAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAD4v4QAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T17:02:31.385Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PetTypeService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\BLL\\PetTypeService.cs",
-              "RelativeDocumentMoniker": "BLL\\PetTypeService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\BLL\\PetTypeService.cs",
-              "RelativeToolTip": "BLL\\PetTypeService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T16:32:44.13Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateDB.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\CreateDB.cs",
-              "RelativeDocumentMoniker": "DTO\\CreateDB.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\CreateDB.cs",
-              "RelativeToolTip": "DTO\\CreateDB.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T15:53:45.018Z",
+              "WhenOpened": "2025-04-28T01:48:15.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "ProductForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\ProductForm.cs",
+              "RelativeDocumentMoniker": "view\\ProductForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\ProductForm.cs [Design]",
+              "RelativeToolTip": "view\\ProductForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T01:48:07.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\MainForm.cs",
+              "RelativeDocumentMoniker": "view\\MainForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\MainForm.cs [Design]",
+              "RelativeToolTip": "view\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T01:48:06.969Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CashForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashForm.cs",
+              "RelativeDocumentMoniker": "view\\CashForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashForm.cs [Design]",
+              "RelativeToolTip": "view\\CashForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T01:47:50.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CashCustomer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashCustomer.cs",
+              "RelativeDocumentMoniker": "view\\CashCustomer.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashCustomer.cs [Design]",
+              "RelativeToolTip": "view\\CashCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T01:47:49.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CashForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashForm.cs",
+              "RelativeDocumentMoniker": "view\\CashForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashForm.cs",
+              "RelativeToolTip": "view\\CashForm.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAqwL0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T07:27:08.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SaleDetail.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\SaleDetail.cs",
+              "RelativeDocumentMoniker": "DTO\\SaleDetail.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\SaleDetail.cs",
+              "RelativeToolTip": "DTO\\SaleDetail.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T07:20:12.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Sale.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\Sale.cs",
+              "RelativeDocumentMoniker": "DTO\\Sale.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\Sale.cs",
+              "RelativeToolTip": "DTO\\Sale.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA4wBgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T07:11:42.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "202504270708559_deleteCashier.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\Migrations\\202504270708559_deleteCashier.cs",
+              "RelativeDocumentMoniker": "Migrations\\202504270708559_deleteCashier.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\Migrations\\202504270708559_deleteCashier.cs",
+              "RelativeToolTip": "Migrations\\202504270708559_deleteCashier.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA7wBgAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T07:09:00.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "202504231001302_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\Migrations\\202504231001302_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\202504231001302_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\Migrations\\202504231001302_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\202504231001302_InitialCreate.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T07:07:28.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T07:06:52.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\Customer.cs",
               "RelativeDocumentMoniker": "DTO\\Customer.cs",
@@ -187,339 +359,31 @@
               "RelativeToolTip": "DTO\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T15:08:16.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SaleDetail.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\SaleDetail.cs",
-              "RelativeDocumentMoniker": "DTO\\SaleDetail.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\SaleDetail.cs",
-              "RelativeToolTip": "DTO\\SaleDetail.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:52:13.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Sale.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\Sale.cs",
-              "RelativeDocumentMoniker": "DTO\\Sale.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\Sale.cs",
-              "RelativeToolTip": "DTO\\Sale.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:21:14.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Pet.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\Pet.cs",
-              "RelativeDocumentMoniker": "DTO\\Pet.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\Pet.cs",
-              "RelativeToolTip": "DTO\\Pet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:21:04.779Z"
+              "WhenOpened": "2025-04-27T07:00:01.1Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "CustomerForm.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CustomerForm.cs",
-              "RelativeDocumentMoniker": "view\\CustomerForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CustomerForm.cs",
-              "RelativeToolTip": "view\\CustomerForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CreateDB.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\CreateDB.cs",
+              "RelativeDocumentMoniker": "DTO\\CreateDB.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\CreateDB.cs",
+              "RelativeToolTip": "DTO\\CreateDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T12:09:14.459Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CashForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashForm.Designer.cs",
-              "RelativeDocumentMoniker": "view\\CashForm.Designer.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashForm.Designer.cs",
-              "RelativeToolTip": "view\\CashForm.Designer.cs",
-              "ViewState": "AgIAAEQBAAAAAAAAAAAAAE8BAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T11:48:33.14Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserAccount.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\UserAccount.cs",
-              "RelativeDocumentMoniker": "DTO\\UserAccount.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\UserAccount.cs",
-              "RelativeToolTip": "DTO\\UserAccount.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACIAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T09:22:53.763Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CustomerViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\UIL\\CustomerViewModel.cs",
-              "RelativeDocumentMoniker": "UIL\\CustomerViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\UIL\\CustomerViewModel.cs",
-              "RelativeToolTip": "UIL\\CustomerViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T08:51:08.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CashCustomer.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashCustomer.cs",
-              "RelativeDocumentMoniker": "view\\CashCustomer.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashCustomer.cs",
-              "RelativeToolTip": "view\\CashCustomer.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwCgAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T08:49:25.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PetService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\BLL\\PetService.cs",
-              "RelativeDocumentMoniker": "BLL\\PetService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\BLL\\PetService.cs",
-              "RelativeToolTip": "BLL\\PetService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T08:42:12.98Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CashProduct.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashProduct.Designer.cs",
-              "RelativeDocumentMoniker": "view\\CashProduct.Designer.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashProduct.Designer.cs",
-              "RelativeToolTip": "view\\CashProduct.Designer.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAEwFMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T08:20:50.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\BLL\\CustomerService.cs",
-              "RelativeDocumentMoniker": "BLL\\CustomerService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\BLL\\CustomerService.cs",
-              "RelativeToolTip": "BLL\\CustomerService.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA3wDoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T07:58:18.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserAccountDAL.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\UserAccountDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\UserAccountDAL.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\UserAccountDAL.cs",
-              "RelativeToolTip": "DAL\\UserAccountDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T07:52:54.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "PetViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\UIL\\PetViewModel.cs",
-              "RelativeDocumentMoniker": "UIL\\PetViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\UIL\\PetViewModel.cs",
-              "RelativeToolTip": "UIL\\PetViewModel.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwA0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T07:43:20.547Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CartItemViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\UIL\\CartItemViewModel.cs",
-              "RelativeDocumentMoniker": "UIL\\CartItemViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\UIL\\CartItemViewModel.cs",
-              "RelativeToolTip": "UIL\\CartItemViewModel.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T07:23:01.329Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "CustomerForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CustomerForm.cs",
-              "RelativeDocumentMoniker": "view\\CustomerForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CustomerForm.cs [Design]",
-              "RelativeToolTip": "view\\CustomerForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T06:11:38.591Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CashProduct.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashProduct.cs",
-              "RelativeDocumentMoniker": "view\\CashProduct.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashProduct.cs",
-              "RelativeToolTip": "view\\CashProduct.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAwEsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T06:09:09.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CashProduct.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashProduct.cs",
-              "RelativeDocumentMoniker": "view\\CashProduct.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashProduct.cs [Design]",
-              "RelativeToolTip": "view\\CashProduct.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T06:09:05.688Z"
+              "WhenOpened": "2025-04-27T06:47:10.56Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\BLL\\UserService.cs",
-              "RelativeDocumentMoniker": "BLL\\UserService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\BLL\\UserService.cs",
-              "RelativeToolTip": "BLL\\UserService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwDoAAAAJAAAAAAAAAA==",
+              "Title": "Model1.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\Model1.cs",
+              "RelativeDocumentMoniker": "DTO\\Model1.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DTO\\Model1.cs",
+              "RelativeToolTip": "DTO\\Model1.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwB0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T06:05:27.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "UserAccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\UserAccountRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\UserAccountRepository.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\UserAccountRepository.cs",
-              "RelativeToolTip": "DAL\\UserAccountRepository.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAIwEQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T06:03:00.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CashForm.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashForm.cs",
-              "RelativeDocumentMoniker": "view\\CashForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashForm.cs",
-              "RelativeToolTip": "view\\CashForm.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAUwHUAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T05:59:17.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CashCustomer.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashCustomer.cs",
-              "RelativeDocumentMoniker": "view\\CashCustomer.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashCustomer.cs [Design]",
-              "RelativeToolTip": "view\\CashCustomer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T05:59:08.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CashForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashForm.cs",
-              "RelativeDocumentMoniker": "view\\CashForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\view\\CashForm.cs [Design]",
-              "RelativeToolTip": "view\\CashForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T05:59:07.87Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SaleService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\BLL\\SaleService.cs",
-              "RelativeDocumentMoniker": "BLL\\SaleService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\BLL\\SaleService.cs",
-              "RelativeToolTip": "BLL\\SaleService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA4wBUAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T05:58:01.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SaleDetailRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\SaleDetailRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\SaleDetailRepository.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\SaleDetailRepository.cs",
-              "RelativeToolTip": "DAL\\SaleDetailRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T05:56:33.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SaleRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\SaleRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\SaleRepository.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\SaleRepository.cs",
-              "RelativeToolTip": "DAL\\SaleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T05:55:47.643Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "PetCategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\PetCategoryRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\PetCategoryRepository.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\PetCategoryRepository.cs",
-              "RelativeToolTip": "DAL\\PetCategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T05:54:37.303Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CustomerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\CustomerRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\CustomerRepository.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\CustomerRepository.cs",
-              "RelativeToolTip": "DAL\\CustomerRepository.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAAD0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T05:54:35.692Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "PetTypeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\PetTypeRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\PetTypeRepository.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ShopPetManagement\\DAL\\PetTypeRepository.cs",
-              "RelativeToolTip": "DAL\\PetTypeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T05:54:34.711Z"
+              "WhenOpened": "2025-04-27T06:44:01.666Z"
             }
           ]
         }

@@ -65,9 +65,9 @@ namespace Pet_Shop_Management_System
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelDash = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -106,7 +106,7 @@ namespace Pet_Shop_Management_System
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Century", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.lblTitle.ForeColor = System.Drawing.Color.Red;
             this.lblTitle.Location = new System.Drawing.Point(292, 13);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(696, 38);
@@ -119,9 +119,9 @@ namespace Pet_Shop_Management_System
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(63, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 17);
+            this.label2.Size = new System.Drawing.Size(94, 21);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Code Make Ease";
+            this.label2.Text = "I Love Pet";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -130,39 +130,35 @@ namespace Pet_Shop_Management_System
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(63, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 18);
+            this.label1.Size = new System.Drawing.Size(178, 23);
             this.label1.TabIndex = 7;
-            this.label1.Text = "C# Mdemy";
+            this.label1.Text = "Meow Meow Shop";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(66, 54);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.CheckedState.Parent = this.btnClose;
-            this.btnClose.CustomImages.Parent = this.btnClose;
             this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.DisabledState.Parent = this.btnClose;
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnClose.HoverState.Parent = this.btnClose;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(1161, -1);
             this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
             this.btnClose.Size = new System.Drawing.Size(40, 34);
             this.btnClose.TabIndex = 3;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -185,7 +181,7 @@ namespace Pet_Shop_Management_System
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.panel5.BackColor = System.Drawing.Color.Goldenrod;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 409);
             this.panel5.Name = "panel5";
@@ -194,13 +190,10 @@ namespace Pet_Shop_Management_System
             // 
             // btnLogout
             // 
-            this.btnLogout.CheckedState.Parent = this.btnLogout;
-            this.btnLogout.CustomImages.Parent = this.btnLogout;
             this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.DisabledState.Parent = this.btnLogout;
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogout.FillColor = System.Drawing.Color.Transparent;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -209,13 +202,11 @@ namespace Pet_Shop_Management_System
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnLogout.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnLogout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnLogout.HoverState.Parent = this.btnLogout;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnLogout.Location = new System.Drawing.Point(0, 570);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
             this.btnLogout.Size = new System.Drawing.Size(194, 45);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
@@ -225,13 +216,10 @@ namespace Pet_Shop_Management_System
             // 
             // btnCash
             // 
-            this.btnCash.CheckedState.Parent = this.btnCash;
-            this.btnCash.CustomImages.Parent = this.btnCash;
             this.btnCash.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCash.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCash.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCash.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCash.DisabledState.Parent = this.btnCash;
             this.btnCash.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCash.FillColor = System.Drawing.Color.Transparent;
             this.btnCash.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -240,13 +228,11 @@ namespace Pet_Shop_Management_System
             this.btnCash.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCash.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCash.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            this.btnCash.HoverState.Parent = this.btnCash;
             this.btnCash.Image = ((System.Drawing.Image)(resources.GetObject("btnCash.Image")));
             this.btnCash.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCash.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnCash.Location = new System.Drawing.Point(0, 364);
             this.btnCash.Name = "btnCash";
-            this.btnCash.ShadowDecoration.Parent = this.btnCash;
             this.btnCash.Size = new System.Drawing.Size(194, 45);
             this.btnCash.TabIndex = 6;
             this.btnCash.Text = "Cash";
@@ -256,13 +242,10 @@ namespace Pet_Shop_Management_System
             // 
             // btnProduct
             // 
-            this.btnProduct.CheckedState.Parent = this.btnProduct;
-            this.btnProduct.CustomImages.Parent = this.btnProduct;
             this.btnProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnProduct.DisabledState.Parent = this.btnProduct;
             this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProduct.FillColor = System.Drawing.Color.Transparent;
             this.btnProduct.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -271,13 +254,11 @@ namespace Pet_Shop_Management_System
             this.btnProduct.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnProduct.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnProduct.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            this.btnProduct.HoverState.Parent = this.btnProduct;
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProduct.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnProduct.Location = new System.Drawing.Point(0, 319);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.ShadowDecoration.Parent = this.btnProduct;
             this.btnProduct.Size = new System.Drawing.Size(194, 45);
             this.btnProduct.TabIndex = 5;
             this.btnProduct.Text = "Product";
@@ -287,13 +268,10 @@ namespace Pet_Shop_Management_System
             // 
             // btnUser
             // 
-            this.btnUser.CheckedState.Parent = this.btnUser;
-            this.btnUser.CustomImages.Parent = this.btnUser;
             this.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUser.DisabledState.Parent = this.btnUser;
             this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUser.Enabled = false;
             this.btnUser.FillColor = System.Drawing.Color.Transparent;
@@ -303,13 +281,11 @@ namespace Pet_Shop_Management_System
             this.btnUser.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnUser.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnUser.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
-            this.btnUser.HoverState.Parent = this.btnUser;
             this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
             this.btnUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUser.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnUser.Location = new System.Drawing.Point(0, 274);
             this.btnUser.Name = "btnUser";
-            this.btnUser.ShadowDecoration.Parent = this.btnUser;
             this.btnUser.Size = new System.Drawing.Size(194, 45);
             this.btnUser.TabIndex = 4;
             this.btnUser.Text = "User";
@@ -319,13 +295,10 @@ namespace Pet_Shop_Management_System
             // 
             // btnCustomer
             // 
-            this.btnCustomer.CheckedState.Parent = this.btnCustomer;
-            this.btnCustomer.CustomImages.Parent = this.btnCustomer;
             this.btnCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCustomer.DisabledState.Parent = this.btnCustomer;
             this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomer.FillColor = System.Drawing.Color.Transparent;
             this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,13 +307,11 @@ namespace Pet_Shop_Management_System
             this.btnCustomer.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCustomer.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCustomer.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
-            this.btnCustomer.HoverState.Parent = this.btnCustomer;
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
             this.btnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomer.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnCustomer.Location = new System.Drawing.Point(0, 229);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.ShadowDecoration.Parent = this.btnCustomer;
             this.btnCustomer.Size = new System.Drawing.Size(194, 45);
             this.btnCustomer.TabIndex = 3;
             this.btnCustomer.Text = "Customers";
@@ -350,13 +321,10 @@ namespace Pet_Shop_Management_System
             // 
             // btnDashboard
             // 
-            this.btnDashboard.CheckedState.Parent = this.btnDashboard;
-            this.btnDashboard.CustomImages.Parent = this.btnDashboard;
             this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDashboard.DisabledState.Parent = this.btnDashboard;
             this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDashboard.FillColor = System.Drawing.Color.Transparent;
             this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -365,13 +333,11 @@ namespace Pet_Shop_Management_System
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnDashboard.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
-            this.btnDashboard.HoverState.Parent = this.btnDashboard;
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnDashboard.Location = new System.Drawing.Point(0, 184);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.ShadowDecoration.Parent = this.btnDashboard;
             this.btnDashboard.Size = new System.Drawing.Size(194, 45);
             this.btnDashboard.TabIndex = 2;
             this.btnDashboard.Text = "Dashboard";
@@ -416,7 +382,6 @@ namespace Pet_Shop_Management_System
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(54, 6);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(81, 82);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 5;
@@ -432,7 +397,7 @@ namespace Pet_Shop_Management_System
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.panel6.BackColor = System.Drawing.Color.Goldenrod;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(194, 365);
             this.panel6.Name = "panel6";
@@ -475,7 +440,6 @@ namespace Pet_Shop_Management_System
             this.progress.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.progress.ProgressThickness = 10;
             this.progress.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.progress.ShadowDecoration.Parent = this.progress;
             this.progress.ShowText = true;
             this.progress.Size = new System.Drawing.Size(139, 139);
             this.progress.TabIndex = 9;
@@ -490,14 +454,14 @@ namespace Pet_Shop_Management_System
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(1, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 18);
+            this.label3.Size = new System.Drawing.Size(122, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Daily Report";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(111)))), ((int)(((byte)(221)))));
+            this.panel9.BackColor = System.Drawing.Color.Goldenrod;
             this.panel9.Controls.Add(this.pictureBox2);
             this.panel9.Controls.Add(this.label5);
             this.panel9.Controls.Add(this.lblDailySale);
@@ -544,7 +508,7 @@ namespace Pet_Shop_Management_System
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(64, 38);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 21);
+            this.label7.Size = new System.Drawing.Size(114, 23);
             this.label7.TabIndex = 0;
             this.label7.Text = "Daily Sales";
             // 
@@ -559,7 +523,7 @@ namespace Pet_Shop_Management_System
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.panel8.BackColor = System.Drawing.Color.Goldenrod;
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(735, 10);
             this.panel8.Name = "panel8";
@@ -589,6 +553,29 @@ namespace Pet_Shop_Management_System
             this.panel10.Size = new System.Drawing.Size(725, 289);
             this.panel10.TabIndex = 2;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(28, 125);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 33);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "I Love Pet";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(-4, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(255, 32);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Meow Meow Shop";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -599,28 +586,7 @@ namespace Pet_Shop_Management_System
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(92, 132);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 25);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Code Make Ease";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(56, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 25);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "C# Mdemy";
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // MainForm
             // 

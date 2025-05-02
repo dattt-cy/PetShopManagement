@@ -51,24 +51,19 @@ namespace Pet_Shop_Management_System
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.CheckedState.Parent = this.btnClose;
-            this.btnClose.CustomImages.Parent = this.btnClose;
             this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.DisabledState.Parent = this.btnClose;
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.btnClose.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnClose.HoverState.Parent = this.btnClose;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(665, 24);
             this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
             this.btnClose.Size = new System.Drawing.Size(40, 34);
             this.btnClose.TabIndex = 28;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -107,7 +102,7 @@ namespace Pet_Shop_Management_System
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.btnSave.BackColor = System.Drawing.Color.Red;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
@@ -125,7 +120,7 @@ namespace Pet_Shop_Management_System
             this.lblcid.AutoSize = true;
             this.lblcid.Location = new System.Drawing.Point(13, 255);
             this.lblcid.Name = "lblcid";
-            this.lblcid.Size = new System.Drawing.Size(32, 20);
+            this.lblcid.Size = new System.Drawing.Size(38, 22);
             this.lblcid.TabIndex = 31;
             this.lblcid.Text = "cid";
             this.lblcid.Visible = false;
@@ -134,14 +129,14 @@ namespace Pet_Shop_Management_System
             // 
             this.txtAddress.Location = new System.Drawing.Point(214, 148);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(462, 26);
+            this.txtAddress.Size = new System.Drawing.Size(462, 30);
             this.txtAddress.TabIndex = 17;
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(214, 198);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(462, 26);
+            this.txtPhone.Size = new System.Drawing.Size(462, 30);
             this.txtPhone.TabIndex = 18;
             // 
             // label3
@@ -149,7 +144,7 @@ namespace Pet_Shop_Management_System
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 201);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 20);
+            this.label3.Size = new System.Drawing.Size(79, 22);
             this.label3.TabIndex = 21;
             this.label3.Text = "Phone :";
             // 
@@ -157,7 +152,7 @@ namespace Pet_Shop_Management_System
             // 
             this.txtName.Location = new System.Drawing.Point(214, 98);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(462, 26);
+            this.txtName.Size = new System.Drawing.Size(462, 30);
             this.txtName.TabIndex = 15;
             // 
             // label2
@@ -165,18 +160,19 @@ namespace Pet_Shop_Management_System
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 20);
+            this.label2.Size = new System.Drawing.Size(76, 22);
             this.label2.TabIndex = 19;
             this.label2.Text = "Name :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Bisque;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
             this.label1.Location = new System.Drawing.Point(12, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 24);
+            this.label1.Size = new System.Drawing.Size(304, 33);
             this.label1.TabIndex = 16;
             this.label1.Text = "Customer Registration";
             // 
@@ -189,13 +185,13 @@ namespace Pet_Shop_Management_System
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 151);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.Size = new System.Drawing.Size(93, 22);
             this.label4.TabIndex = 24;
             this.label4.Text = "Address :";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.panel1.BackColor = System.Drawing.Color.Goldenrod;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
