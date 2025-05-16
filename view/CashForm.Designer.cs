@@ -54,6 +54,7 @@ namespace Pet_Shop_Management_System
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.printDocumentInvoice = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCash)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -305,6 +306,10 @@ namespace Pet_Shop_Management_System
             this.panel1.Size = new System.Drawing.Size(1000, 15);
             this.panel1.TabIndex = 3;
             // 
+            // printDocumentInvoice
+            // 
+            this.printDocumentInvoice.DocumentName = "print";
+            // 
             // CashForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -315,7 +320,6 @@ namespace Pet_Shop_Management_System
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CashForm";
-            this.Text = "CASH";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCash)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -345,5 +349,6 @@ namespace Pet_Shop_Management_System
         private System.Windows.Forms.DataGridViewImageColumn Up;
         private System.Windows.Forms.DataGridViewImageColumn Down;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Drawing.Printing.PrintDocument printDocumentInvoice;
     }
 }

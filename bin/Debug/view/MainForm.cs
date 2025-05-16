@@ -8,22 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShopPetManagement.BLL;
+using ShopPetManagement.DAL;
 using ShopPetManagement.DAO;
 
 namespace Pet_Shop_Management_System
 {
     public partial class MainForm : Form
     {
-        SqlConnection cn = new SqlConnection();
-        SqlCommand cm = new SqlCommand();
-        //DbConnect dbcon = new DbConnect();
-        
+        private readonly SaleService _saleService;
+        private readonly UserAccount _currentUser;
         public MainForm(UserAccount account)
         {
             InitializeComponent();
-            //cn = new SqlConnection(dbcon.connection());
+            _saleService = new SaleService();
+            _currentUser = account;
             btnDashboard.PerformClick();
             loadDailySale();
+     
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -115,15 +117,20 @@ namespace Pet_Shop_Management_System
 
             try
             {
-                cn.Open();
-                cm = new SqlCommand("SELECT ISNULL(SUM(total),0) AS total FROM tbCash WHERE transno LIKE'" + sdate + "%'", cn);
-                lblDailySale.Text = double.Parse(cm.ExecuteScalar().ToString()).ToString("#,##0.00");
-                cn.Close();
+
+                DateTime yesterday = DateTime.Today.AddDays(-1);
+
+             
+                int cashierId = _currentUser.UserAccountId;  
+
+                decimal revenue = _saleService.GetDailyRevenueByCashier(yesterday, cashierId);
+
+                lblDailySale.Text = revenue.ToString("#,##0") + " đ";
             }
             catch (Exception ex)
             {
-                cn.Close();
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Lỗi khi tải doanh thu: " + ex.Message,
+                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

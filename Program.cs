@@ -4,24 +4,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Pet_Shop_Management_System;
-
+using System.Data.Entity.Migrations;                      
+using ShopPetManagement.Migrations;
+using System.Data.Entity;
 namespace ShopPetManagement
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+   
         [STAThread]
-        static void Main()
-        {
+          static void Main()
+    {
+
+            Database.SetInitializer(
+                  new MigrateDatabaseToLatestVersion<Model1, Configuration>());
+
+
             using (var ctx = new Model1())
-            {
-                ctx.Database.Initialize(force: true);
-            }
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+        {
+            ctx.Database.Initialize(false);
         }
+
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new LoginForm());
+    }
     }
 }

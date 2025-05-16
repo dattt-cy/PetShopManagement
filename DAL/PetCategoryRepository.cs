@@ -51,6 +51,10 @@ namespace ShopPetManagement.DAL
                     ctx.PetCategories.Remove(c);
                     ctx.SaveChanges();
                 }
+                else
+                {
+                    throw new InvalidOperationException("Category này đã bị xóa hoặc không tồn tại nữa.");
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using ShopPetManagement.DAL;
 using ShopPetManagement.DAO;
@@ -11,25 +12,17 @@ namespace ShopPetManagement.BLL
 
         public int CreateSale(int customerId, int cashierId, List<(int petId, int quantity, decimal unitPrice)> products)
         {
-            // 1) Chuẩn bị đối tượng Sale
-            var sale = new Sale
-            {
-                SaleDate = DateTime.Now,
-                CustomerId = customerId,
-                CashierId = cashierId
-            };
-
-            // 2) Chuyển sang list SaleDetail, không gán SaleId ở đây
-            var details = products.Select(p => new SaleDetail
-            {
-                PetId = p.petId,
-                Quantity = p.quantity,
-                UnitPrice = p.unitPrice
-            }).ToList();
-
-            // 3) Gọi repo – EF sẽ xử lý insert sale trước, lấy SaleId rồi insert detail
-            return _saleRepo.CreateSaleWithDetails(sale, details);
+            return _saleRepo.CreateSaleWithDetails(customerId, cashierId, products);
         }
+        public decimal GetDailyRevenue(DateTime date)
+        {
+            return _saleRepo.GetRevenueByDate(date);
+        }
+        public decimal GetDailyRevenueByCashier(DateTime date, int cashierId)
+        {
+            return _saleRepo.GetRevenueByDateAndCashier(date, cashierId);
+        }
+
     }
 }
 

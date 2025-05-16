@@ -18,12 +18,10 @@ namespace Pet_Shop_Management_System
             _userForm = userForm;
             _userService = new UserService();
 
-            // Thiết lập comboBox Role
             cbRole.Items.Clear();
             cbRole.Items.AddRange(new string[] { "Administrator", "Cashier", "Employee" });
-            cbRole.SelectedIndex = 2; // mặc định Employee
+            cbRole.SelectedIndex = 2;
 
-            // Ban đầu chỉ enable nút Save
             btnSave.Enabled = true;
             btnUpdate.Enabled = false;
         }
@@ -46,13 +44,21 @@ namespace Pet_Shop_Management_System
                 };
 
                 _userService.Add(user);
-                MessageBox.Show("User successfully registered!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đăng ký người dùng thành công!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _userForm.LoadUser();
                 Clear();
             }
-            catch (Exception ex)
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (InvalidOperationException ex)
             {
                 MessageBox.Show(ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi không xác định: " + ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -71,13 +77,21 @@ namespace Pet_Shop_Management_System
                 _editingUser.Password = cbRole.SelectedItem.ToString() == "Employee" ? null : txtPass.Text;
 
                 _userService.Update(_editingUser);
-                MessageBox.Show("User data successfully updated!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cập nhật thông tin người dùng thành công!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _userForm.LoadUser();
                 this.Close();
             }
-            catch (Exception ex)
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (InvalidOperationException ex)
             {
                 MessageBox.Show(ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi không xác định: " + ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -118,17 +132,17 @@ namespace Pet_Shop_Management_System
         {
             if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtAddress.Text))
             {
-                MessageBox.Show("Name and Address are required.", title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tên và địa chỉ không được để trống.", title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (dtDob.Value.Date > DateTime.Today.AddYears(-18))
             {
-                MessageBox.Show("User must be at least 18 years old.", title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Người dùng phải từ 18 tuổi trở lên.", title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (cbRole.SelectedItem.ToString() != "Employee" && string.IsNullOrWhiteSpace(txtPass.Text))
             {
-                MessageBox.Show("Password is required for non-employee roles.", title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mật khẩu là bắt buộc đối với vai trò không phải Employee.", title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;

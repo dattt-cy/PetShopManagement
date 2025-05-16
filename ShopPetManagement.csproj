@@ -94,6 +94,8 @@
     <Compile Include="BLL\UserAccountService.cs" />
     <Compile Include="BLL\UserService.cs" />
     <Compile Include="DAL\CustomerRepository.cs" />
+    <Compile Include="DAL\ICrudRepository.cs" />
+    <Compile Include="DAL\ICustomerRepository.cs" />
     <Compile Include="DAL\PetCategoryRepository.cs" />
     <Compile Include="DAL\PetRepository.cs" />
     <Compile Include="DAL\PetTypeRepository.cs" />

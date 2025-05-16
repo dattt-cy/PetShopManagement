@@ -1,5 +1,4 @@
-﻿// File: CustomerModule.cs
-using System;
+﻿using System;
 using System.Windows.Forms;
 using PetShopApp.DTO;
 using ShopPetManagement.BLL;
@@ -38,13 +37,21 @@ namespace Pet_Shop_Management_System
             try
             {
                 _service.Add(customer);
-                MessageBox.Show("Customer has been successfully registered!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đăng ký khách hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _parent.LoadCustomers();
                 Clear();
             }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi nghiệp vụ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Đã xảy ra lỗi không xác định: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -63,13 +70,21 @@ namespace Pet_Shop_Management_System
             try
             {
                 _service.Update(_editingCustomer);
-                MessageBox.Show("Customer data has been successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cập nhật thông tin khách hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _parent.LoadCustomers();
                 this.Close();
             }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi nghiệp vụ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Đã xảy ra lỗi không xác định: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -87,7 +102,7 @@ namespace Pet_Shop_Management_System
         {
             if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtAddress.Text) || string.IsNullOrWhiteSpace(txtPhone.Text))
             {
-                MessageBox.Show("Name, Address and Phone are required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tên, địa chỉ và số điện thoại không được để trống.", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -104,9 +119,7 @@ namespace Pet_Shop_Management_System
             _editingCustomer = null;
         }
 
-        /// <summary>
-        /// Nạp dữ liệu customer vào form để chỉnh sửa
-        /// </summary>
+   
         public void LoadForEdit(Customer customer)
         {
             _editingCustomer = customer;

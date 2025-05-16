@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Principal;
 using System.Windows.Forms;
 using ShopPetManagement.BLL;
 using ShopPetManagement.DAO;
@@ -36,22 +37,20 @@ namespace Pet_Shop_Management_System
 
         private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Không xử lý header
             if (e.RowIndex < 0) return;
 
-            // Xác định cột vừa click
             var col = dgvProduct.Columns[e.ColumnIndex].Name;
 
-            // Lấy ViewModel
+          
             var vm = dgvProduct.Rows[e.RowIndex].DataBoundItem as PetViewModel;
             if (vm == null) return;
 
-            // Trường hợp Edit
+           
             if (col == "Edit")
             {
                 using (var module = new ProductModule(this))
                 {
-                    // Lấy Pet thật từ BLL
+                  
                     var pet = _service.GetAllPets()
                                       .FirstOrDefault(p => p.PetId == vm.PetId);
                     if (pet != null)
@@ -61,17 +60,31 @@ namespace Pet_Shop_Management_System
                     }
                 }
             }
-            // Trường hợp Delete
+           
             else if (col == "Delete")
             {
-                if (MessageBox.Show("Bạn có chắc muốn xóa sản phẩm này?",
-                                    Title,
-                                    MessageBoxButtons.YesNo,
-                                    MessageBoxIcon.Question)
+                bool hasSales = _service.HasSales(vm.PetId);
+               
+                string msg = hasSales
+                    ? "Thú cưng này đã từng có giao dịch bán hàng.\n" +
+                      "Nếu bạn xóa, toàn bộ dữ liệu liên quan ở SaleDetails sẽ bị mất hoàn toàn.\n" +
+                      "Bạn có chắc muốn tiếp tục?"
+                    : "Bạn có chắc muốn xóa sản phẩm này?";
+                MessageBoxIcon icon = hasSales ? MessageBoxIcon.Warning : MessageBoxIcon.Question;
+
+                if (MessageBox.Show(msg, Title, MessageBoxButtons.YesNo, icon)
                     == DialogResult.Yes)
                 {
-                    _service.Delete(vm.PetId);
-                    LoadProduct();
+                    try
+                    {
+                        _service.Delete(vm.PetId);
+                        LoadProduct();
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        LoadProduct();
+                    }
                 }
             }
         }

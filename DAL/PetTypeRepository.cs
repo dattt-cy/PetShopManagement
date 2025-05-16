@@ -51,6 +51,7 @@ namespace ShopPetManagement.DAL
                     ctx.PetTypes.Remove(t);
                     ctx.SaveChanges();
                 }
+
             }
         }
     }

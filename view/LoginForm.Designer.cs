@@ -71,7 +71,8 @@ namespace Pet_Shop_Management_System
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 21);
             this.label5.TabIndex = 6;
-            this.label5.Text = "C# Mdemy";
+            this.label5.Text = "Hoang Dat";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 

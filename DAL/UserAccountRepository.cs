@@ -28,6 +28,9 @@ namespace ShopPetManagement.DAL
                 {
                     ctx.UserAccounts.Remove(u);
                     ctx.SaveChanges();
+                }else
+                {
+                    throw new InvalidOperationException("Nhân viên này đã bị xóa hoặc không tồn tại nữa.");
                 }
             }
         }
@@ -66,6 +69,14 @@ namespace ShopPetManagement.DAL
             using (var ctx = new Model1())
             {
                 return ctx.UserAccounts.Find(userAccountId);
+            }
+        }
+
+        public bool HasSales(int cashierId)
+        {
+            using (var ctx = new Model1())
+            {
+                return ctx.Sales.Any(s => s.CashierId == cashierId);
             }
         }
 

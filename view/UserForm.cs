@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PetShopApp.DTO;
 using ShopPetManagement.BLL;
 using ShopPetManagement.DAO;
 
@@ -25,7 +26,7 @@ namespace Pet_Shop_Management_System
         }
         private void DgvUser_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            // Duyệt qua tất cả các dòng và gán No = index + 1
+          
             for (int i = 0; i < dgvUser.Rows.Count; i++)
             {
                 dgvUser.Rows[i].Cells["Column1"].Value = (i + 1).ToString();
@@ -56,26 +57,44 @@ namespace Pet_Shop_Management_System
 
             if (colName == "Edit")
             {
-                // Chuyển sang Form sửa, truyền thẳng object
+             
                 using (var module = new UserModule(this))
                 {
-                    module.LoadUserForEdit(account);   // bạn tự viết helper trong UserModule
+                    module.LoadUserForEdit(account);   
                     module.ShowDialog();
                 }
             }
             else if (colName == "Delete")
             {
-                if (MessageBox.Show("Bạn có chắc muốn xóa bản ghi này?",
-                                    "Xác nhận",
-                                    MessageBoxButtons.YesNo,
-                                    MessageBoxIcon.Question)
-                                    == DialogResult.Yes)
+
+                bool hasSales = _userService.HasSales(account.UserAccountId);
+
+               
+                string msg = hasSales
+                    ? "Nhân viên này đã thực hiện giao dịch bán hàng.\n" +
+                      "Nếu bạn xóa, toàn bộ dữ liệu Sales liên quan sẽ bị mất hoàn toàn.\n" +
+                      "Bạn có chắc muốn tiếp tục?"
+                    : "Bạn có chắc muốn xóa bản ghi này?";
+                var icon = hasSales ? MessageBoxIcon.Warning : MessageBoxIcon.Question;
+
+              
+                if (MessageBox.Show(msg, "Xác nhận xóa người dùng",
+                                    MessageBoxButtons.YesNo, icon)
+                    == DialogResult.Yes)
                 {
-                    // Gọi BLL xóa
-                    _userService.Delete(account.UserAccountId);
-                    MessageBox.Show("Xóa thành công!", "Thông báo",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadUser();  // refresh grid
+                    try
+                    {
+                        _userService.Delete(account.UserAccountId);
+                        MessageBox.Show("Xóa thành công!", "Thông báo",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadUser();
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        MessageBox.Show(ex.Message, "Thông báo",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        LoadUser();
+                    }
                 }
             }
         }

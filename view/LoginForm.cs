@@ -18,15 +18,12 @@ namespace Pet_Shop_Management_System
     {
         private readonly UserAccountService _userService = new UserAccountService();
 
-        //SqlConnection cn = new SqlConnection();
-        //SqlCommand cm = new SqlCommand();
-        //DbConnect dbcon = new DbConnect();
-        SqlDataReader dr;
+      
         string title = "Pet Shop Management System";
         public LoginForm()
         {
             InitializeComponent();
-            //cn = new SqlConnection(dbcon.connection());
+   
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -48,8 +45,8 @@ namespace Pet_Shop_Management_System
                 if (user != null)
                 {
                    
-                    MessageBox.Show($"Welcome {user.Name}",
-                                    "ACCESS GRANTED",
+                    MessageBox.Show($"Chao Mung {user.Name}",
+                                    "Ket noi duoc chap nhan",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
 
@@ -65,8 +62,8 @@ namespace Pet_Shop_Management_System
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password!",
-                                    "ACCESS DENIED",
+                    MessageBox.Show("Mat khau hoac username khong ton tai!",
+                                    "Tu choi truy cap",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
                     txtpass.Clear();
@@ -85,7 +82,12 @@ namespace Pet_Shop_Management_System
 
         private void btnForget_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Please contact your BOSS!", "FORGET PASSWORD", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Hay lien he cho admin!", "Quen Mat Khau", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
