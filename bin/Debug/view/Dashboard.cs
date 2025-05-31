@@ -8,19 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShopPetManagement.BLL;
 
 namespace Pet_Shop_Management_System
 {
     public partial class Dashboard : Form
     {
-        //SqlConnection cn = new SqlConnection();
-        //SqlCommand cm = new SqlCommand();
-        //DbConnect dbcon = new DbConnect();        
+            
         string title = "Pet Shop Management System";
+        private readonly PetService _petSvc = new PetService();
         public Dashboard()
         {
             InitializeComponent();
-            //cn = new SqlConnection(dbcon.connection());
+        
         }
 
 
@@ -47,10 +47,19 @@ namespace Pet_Shop_Management_System
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            lblDog.Text = extractData("Dog").ToString();
-            lblCat.Text = extractData("Cat").ToString();
-            lblbird.Text = extractData("Bird").ToString();
-            lblFish.Text = extractData("Fish").ToString();
+            lblAnimal.Text = extractData("Dog").ToString();
+            lblFood.Text = extractData("Cat").ToString();
+            lblMedicine.Text = extractData("Bird").ToString();
+            lblItem.Text = extractData("Fish").ToString();
+            lblAnimal.Text = _petSvc.CountByCategories("Thú kiểng", "Thú cảnh").ToString();
+            lblFood.Text = _petSvc.CountByCategories("Thức ăn").ToString();
+            lblItem.Text = _petSvc.CountByCategories("Phụ kiện").ToString();
+            lblMedicine.Text = _petSvc.CountByCategories("Thuốc").ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

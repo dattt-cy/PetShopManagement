@@ -8,7 +8,7 @@ using ShopPetManagement.DAO;
 
 namespace ShopPetManagement.DAL
 {
-    public class UserAccountRepository
+    public class UserAccountRepository: ICrudRepository<UserAccount>
     {
         public List<UserAccount> GetAll()
         {

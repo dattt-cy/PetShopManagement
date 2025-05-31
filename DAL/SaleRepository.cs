@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace ShopPetManagement.DAL
 {
-    public class SaleRepository
+    public class SaleRepository 
     {
    
         public int CreateSaleWithDetails(Sale sale, IEnumerable<SaleDetail> details)
@@ -36,6 +36,8 @@ namespace ShopPetManagement.DAL
                 return sale;
             }
         }
+
+
 
         public List<Sale> GetAll()
         {
@@ -105,6 +107,46 @@ namespace ShopPetManagement.DAL
                           .Sum(d => d.Quantity * d.UnitPrice);
             }
         }
+        
+        
+
+        public Sale GetById(int id)
+        {
+            using (var ctx = new Model1())
+            {
+                return ctx.Sales.Find(id);
+            }
+        }
+
+
+        public void Update(Sale sale)
+        {
+            using (var ctx = new Model1())
+            {
+                var existing = ctx.Sales.Find(sale.SaleId);
+                if (existing == null)
+                {
+                    throw new InvalidOperationException("Sale không tồn tại.");
+                }
+                ctx.Entry(existing).CurrentValues.SetValues(sale);
+                ctx.SaveChanges();
+            }
+        }
+
+        public void Delete(int id)
+        {
+            using (var ctx = new Model1())
+            {
+                var existing = ctx.Sales.Find(id);
+                if (existing == null)
+                {
+                    throw new InvalidOperationException("Sale không tồn tại.");
+                }
+                ctx.Sales.Remove(existing);
+                ctx.SaveChanges();
+            }
+        }
+
 
     }
 }

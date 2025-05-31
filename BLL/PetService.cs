@@ -86,5 +86,9 @@ namespace ShopPetManagement.BLL
         {
            return _repo.HasSales(petId);
         }
+        public int CountByCategories(params string[] categoryNames)
+        {
+            return _repo.CountByCategories(categoryNames);
+        }
     }
 }

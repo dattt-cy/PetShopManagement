@@ -94,8 +94,13 @@
     <Compile Include="BLL\UserAccountService.cs" />
     <Compile Include="BLL\UserService.cs" />
     <Compile Include="DAL\CustomerRepository.cs" />
+    <Compile Include="DAL\ICategoryRepository.cs" />
     <Compile Include="DAL\ICrudRepository.cs" />
     <Compile Include="DAL\ICustomerRepository.cs" />
+    <Compile Include="DAL\IPetRepository.cs" />
+    <Compile Include="DAL\IPetTypeRepository.cs" />
+    <Compile Include="DAL\ISaleRepository.cs" />
+    <Compile Include="DAL\IUserAccountRepository.cs" />
     <Compile Include="DAL\PetCategoryRepository.cs" />
     <Compile Include="DAL\PetRepository.cs" />
     <Compile Include="DAL\PetTypeRepository.cs" />
@@ -103,7 +108,7 @@
     <Compile Include="DAL\SaleRepository.cs" />
     <Compile Include="DAL\UserAccountDAL.cs" />
     <Compile Include="DAL\UserAccountRepository.cs" />
-    <Compile Include="DTO\CreateDB.cs" />
+    <Compile Include="DAL\CreateDB.cs" />
     <Compile Include="DTO\Customer.cs" />
     <Compile Include="DTO\PetCategory.cs" />
     <Compile Include="DTO\Pet.cs" />
@@ -111,7 +116,7 @@
     <Compile Include="DTO\Sale.cs" />
     <Compile Include="DTO\SaleDetail.cs" />
     <Compile Include="DTO\UserAccount.cs" />
-    <Compile Include="DTO\Model1.cs" />
+    <Compile Include="DAL\Model1.cs" />
     <Compile Include="Migrations\202504231001302_InitialCreate.cs" />
     <Compile Include="Migrations\202504231001302_InitialCreate.Designer.cs">
       <DependentUpon>202504231001302_InitialCreate.cs</DependentUpon>

@@ -62,12 +62,11 @@ namespace Pet_Shop_Management_System
                 SalePrice = ParseDecimal(txtPrice.Text)
             };
 
-            // 4) Thêm vào DB
+      
             _service.Add(pet);
 
-            // 5) Làm mới lưới và đóng form
             _parent.LoadProduct();
-            MessageBox.Show("Product has been successfully registered!", TitleText,
+            MessageBox.Show("San pham da duoc them thanh cong!", TitleText,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
@@ -87,7 +86,7 @@ namespace Pet_Shop_Management_System
                 _typeService.Add(type);
             }
 
-            // Apply updates
+         
             _editingPet.Name = txtName.Text.Trim();
             _editingPet.PetTypeId = type.PetTypeId;
             _editingPet.PetCategoryId = (int)cbCategory.SelectedValue;
@@ -95,14 +94,14 @@ namespace Pet_Shop_Management_System
             _editingPet.SalePrice = ParseDecimal(txtPrice.Text);
 
             _service.Update(_editingPet);
-            MessageBox.Show("Product has been successfully updated!", TitleText, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("San pham da duoc cap nhat !", TitleText, MessageBoxButtons.OK, MessageBoxIcon.Information);
             _parent.LoadProduct();
             Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-         //   Clear();
+    
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -117,19 +116,19 @@ namespace Pet_Shop_Management_System
                 string.IsNullOrWhiteSpace(txtQty.Text) ||
                 string.IsNullOrWhiteSpace(txtPrice.Text))
             {
-                MessageBox.Show("All fields are required.", TitleText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Khong duoc de trong du lieu.", TitleText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (!int.TryParse(txtQty.Text, out int qty) || qty <= 0)
             {
-                MessageBox.Show("Quantity must be a positive integer.", TitleText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("So luong phai la so nguyen duong.", TitleText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (!decimal.TryParse(txtPrice.Text, out decimal price) || price <= 0)
             {
-                MessageBox.Show("Price must be a positive number.", TitleText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Gia phai la mot so nguyen duong.", TitleText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -148,7 +147,6 @@ namespace Pet_Shop_Management_System
 
         private string GeneratePCode()
         {
-            // Example: generate based on timestamp
             return "P" + DateTime.Now.Ticks;
         }
 

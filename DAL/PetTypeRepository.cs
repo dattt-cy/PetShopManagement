@@ -7,7 +7,7 @@ using ShopPetManagement.DAO;
 
 namespace ShopPetManagement.DAL
 {
-    public class PetTypeRepository
+    public class PetTypeRepository: IPetTypeRepository
     {
         public List<PetType> GetAll()
         {
@@ -54,5 +54,22 @@ namespace ShopPetManagement.DAL
 
             }
         }
+        public List<PetType> GetByName(string name)
+        {
+            using (var ctx = new Model1())
+            {
+                return ctx.PetTypes
+                          .Where(t => t.Name.Contains(name))
+                          .ToList();
+            }
+        }
+        public PetType GetById(int id)
+        {
+            using (var ctx = new Model1())
+            {
+                return ctx.PetTypes.Find(id);
+            }
+        }
+
     }
 }

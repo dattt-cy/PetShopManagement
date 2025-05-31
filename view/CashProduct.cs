@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 using ShopPetManagement.BLL;
-using ShopPetManagement.UIL;  // chứa PetViewModel
+using ShopPetManagement.UIL;  
 
 namespace Pet_Shop_Management_System
 {
@@ -17,7 +17,7 @@ namespace Pet_Shop_Management_System
         {
             InitializeComponent();
             _parent = parent;
-            LoadProduct();    // gọi ngay khi form khởi tạo
+            LoadProduct();    
         }
 
         private void LoadProduct()
@@ -43,13 +43,12 @@ namespace Pet_Shop_Management_System
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            // nếu muốn search theo tên:
+        
             var keyword = txtSearch.Text.Trim();
             var pets = string.IsNullOrEmpty(keyword)
                 ? _petService.GetAllPets()
                 : _petService.Search(keyword);
 
-            // Re-bind tương tự như trên
             var vms = pets
                 .OrderBy(p => p.PetId)
                 .Select((p, i) => new PetViewModel

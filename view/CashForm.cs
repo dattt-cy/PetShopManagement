@@ -109,8 +109,9 @@ namespace Pet_Shop_Management_System
 
                 MessageBox.Show($"Thanh toán & in hóa đơn thành công! Mã: {_currentSaleId}",
                                 "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _mainForm.loadDailySale();
 
-             
+
                 _cartItems.Clear();
                 _customerId = 0;
                 _customerChosen = false;

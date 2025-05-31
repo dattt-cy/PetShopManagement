@@ -7,7 +7,7 @@ using ShopPetManagement.DAO;
 
 namespace ShopPetManagement.DAL
 {
-    public class PetCategoryRepository
+    public class PetCategoryRepository : IPetCategoryRepository
     {
         public List<PetCategory> GetAll()
         {
@@ -55,6 +55,23 @@ namespace ShopPetManagement.DAL
                 {
                     throw new InvalidOperationException("Category này đã bị xóa hoặc không tồn tại nữa.");
                 }
+            }
+        }
+        public PetCategory GetById(int id)
+        {
+            using (var ctx = new Model1())
+            {
+                return ctx.PetCategories.Find(id);
+            }
+        }
+
+        public List<PetCategory> GetByName(string name)
+        {
+            using (var ctx = new Model1())
+            {
+                return ctx.PetCategories
+                          .Where(c => c.Name.Contains(name))
+                          .ToList();
             }
         }
     }

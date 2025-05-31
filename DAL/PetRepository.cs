@@ -8,7 +8,7 @@ using ShopPetManagement.DAO;
 namespace ShopPetManagement.DAL
 {
 
-    public class PetRepository
+    public class PetRepository: IPetRepository
     {
         public List<Pet> GetAll()
         {
@@ -99,6 +99,16 @@ namespace ShopPetManagement.DAL
             {
                 
                 return ctx.SaleDetails.Any(sd => sd.PetId == petId);
+            }
+        }
+
+        public int CountByCategories(params string[] categoryNames)
+        {
+            using (var ctx = new Model1())          
+            {
+                return ctx.Pets
+                          .Where(p => categoryNames.Contains(p.Category.Name))
+                          .Count();
             }
         }
     }

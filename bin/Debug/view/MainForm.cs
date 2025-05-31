@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ShopPetManagement.BLL;
 using ShopPetManagement.DAL;
 using ShopPetManagement.DAO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace Pet_Shop_Management_System
 {
@@ -118,13 +119,24 @@ namespace Pet_Shop_Management_System
             try
             {
 
-                DateTime yesterday = DateTime.Today.AddDays(-1);
+                DateTime today = DateTime.Today;
 
-             
-                int cashierId = _currentUser.UserAccountId;  
+                decimal revenue = 0m;
+                int cashierId = _currentUser.UserAccountId; try
+                {
+                    revenue = _saleService.GetDailyRevenueByCashier(today, cashierId);
 
-                decimal revenue = _saleService.GetDailyRevenueByCashier(yesterday, cashierId);
+                }
+                catch (InvalidOperationException)
+                {
+                    
+                }
+                catch (Exception)
+                {
+                    
+                }
 
+              
                 lblDailySale.Text = revenue.ToString("#,##0") + " đ";
             }
             catch (Exception ex)
